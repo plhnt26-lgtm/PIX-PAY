@@ -63,7 +63,6 @@ function loadBalance(){
 
 // Buy Plan
 function buyPlan(price) {
-function buyPlan(price) {
 
     let balance = Number(localStorage.getItem("balance")) || 0;
 
