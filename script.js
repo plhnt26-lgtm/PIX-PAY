@@ -68,7 +68,7 @@ function buyPlan(price){
     if(!ok) return;
 
     let balance = Number(localStorage.getItem("balance"));
-
+    alert(localStorage.getItem("history"));
     if(balance < price){
         alert("Not enough balance!");
         return;
