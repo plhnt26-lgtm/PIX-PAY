@@ -103,7 +103,33 @@ if(localStorage.getItem("balance")==null){
 }
 
 function loadHistory(){
+function loadHistory(){
 
+    alert(localStorage.getItem("history"));
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    let historyList = document.getElementById("historyList");
+
+    if(history.length == 0){
+        historyList.innerHTML = "<p>No investment history.</p>";
+        return;
+    }
+
+    let html = "";
+
+    history.forEach(function(item){
+        html += `
+        <div class="card">
+            <h3>${item.type}</h3>
+            <p>Amount: $${item.amount}</p>
+            <p>Date: ${item.date}</p>
+        </div>
+        `;
+    });
+
+    historyList.innerHTML = html;
+}
     alert(localStorage.getItem("history"));
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
