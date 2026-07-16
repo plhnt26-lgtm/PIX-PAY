@@ -147,7 +147,6 @@ function loadHistory(){
 
 }
 function buyPlan(price){
-    alert("Button is working");
 
     let balance = Number(localStorage.getItem("balance"));
 
@@ -155,6 +154,24 @@ function buyPlan(price){
         alert("Not enough balance!");
         return;
     }
+
+    balance -= price;
+    localStorage.setItem("balance", balance);
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    history.push({
+        type: "Investment",
+        amount: price,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+    loadBalance();
+
+    alert("Investment Successful!");
+}
 
     balance = balance - price;
 
