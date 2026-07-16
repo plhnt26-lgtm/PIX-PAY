@@ -95,13 +95,7 @@ function buyPlan(price){
     alert("Investment Successful!");
 }
 
-    const ok = confirm("Do you want to invest $" + price + "?");
-
-    if(ok){
-        alert("Investment Successful!");
-    }
-
-}
+    
 // Balance
 if(localStorage.getItem("balance")==null){
     localStorage.setItem("balance",1000);
@@ -119,6 +113,7 @@ function loadBalance(){
 
 }
 function buyPlan(price){
+    alert("Button is working");
 
     let balance = Number(localStorage.getItem("balance"));
 
