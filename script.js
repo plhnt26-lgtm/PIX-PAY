@@ -74,3 +74,19 @@ function buyPlan(price){
     }
 
 }
+// Balance
+if(localStorage.getItem("balance")==null){
+    localStorage.setItem("balance",1000);
+}
+
+function loadBalance(){
+
+    const balance = localStorage.getItem("balance");
+
+    const balanceText = document.getElementById("balance");
+
+    if(balanceText){
+        balanceText.innerHTML = "$" + Number(balance).toFixed(2);
+    }
+
+}
