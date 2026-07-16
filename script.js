@@ -102,7 +102,14 @@ if(localStorage.getItem("balance")==null){
     localStorage.setItem("balance",1000);
 }
 
-function loadBalance(){
+function loadHistory(){
+
+    alert(localStorage.getItem("history"));
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    ...
+}
 
     const balance = localStorage.getItem("balance");
 
