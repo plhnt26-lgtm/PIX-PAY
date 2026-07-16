@@ -121,3 +121,13 @@ footer{
     background:#fff;
     color:#666;
   }
+.dashboard{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.card{
+    min-width: 180px;
+    flex-shrink: 0;
+}
