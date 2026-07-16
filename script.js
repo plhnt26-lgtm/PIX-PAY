@@ -67,6 +67,34 @@ function submitWithdraw(){
 }
 function buyPlan(price){
 
+    alert("Button is working");
+
+    let balance = Number(localStorage.getItem("balance"));
+
+    if(balance < price){
+        alert("Not enough balance!");
+        return;
+    }
+
+    balance -= price;
+
+    localStorage.setItem("balance", balance);
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    history.push({
+        type: "Investment",
+        amount: price,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+    loadBalance();
+
+    alert("Investment Successful!");
+}
+
     const ok = confirm("Do you want to invest $" + price + "?");
 
     if(ok){
