@@ -115,3 +115,33 @@ localStorage.setItem("history", JSON.stringify(history));
 
     alert("Investment Successful!");
 }
+function loadHistory(){
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    let historyList = document.getElementById("historyList");
+
+    if(!historyList) return;
+
+    if(history.length === 0){
+        historyList.innerHTML = "<p>No investment history.</p>";
+        return;
+    }
+
+    let html = "";
+
+    history.forEach(function(item){
+
+        html += `
+        <div class="card" style="margin-top:15px;">
+            <h3>${item.type}</h3>
+            <p>Amount: $${item.amount}</p>
+            <p>Date: ${item.date}</p>
+        </div>
+        `;
+
+    });
+
+    historyList.innerHTML = html;
+
+}
