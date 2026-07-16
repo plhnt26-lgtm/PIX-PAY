@@ -173,4 +173,4 @@ function loadHistory(){
     historyList.innerHTML = html;
 
 }
-alert("script.js loaded");
+//alert("script.js loaded");
