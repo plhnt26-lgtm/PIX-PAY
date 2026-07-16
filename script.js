@@ -93,6 +93,11 @@ function buyPlan(price) {
 
     alert("Plan purchased successfully!");
 }
+
+
+// History
+function loadHistory(){
+}
     localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history") || "[]");
