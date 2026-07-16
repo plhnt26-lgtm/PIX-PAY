@@ -65,3 +65,12 @@ function submitWithdraw(){
     alert("Withdraw Submitted!");
 
 }
+function buyPlan(price){
+
+    const ok = confirm("Do you want to invest $" + price + "?");
+
+    if(ok){
+        alert("Investment Successful!");
+    }
+
+}
