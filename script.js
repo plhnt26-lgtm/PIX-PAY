@@ -67,7 +67,8 @@ function submitWithdraw(){
 }
 function buyPlan(price){
 
-    alert("Button is working");
+    const ok = confirm("Do you want to invest $" + price + "?");
+if (!ok) return;
 
     let balance = Number(localStorage.getItem("balance"));
 
