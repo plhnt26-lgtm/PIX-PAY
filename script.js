@@ -81,12 +81,14 @@ function buyPlan(price) {
 
     localStorage.setItem("balance", balance);
 
+    console.log("New Balance:", balance);
+
     let history = JSON.parse(localStorage.getItem("history") || "[]");
 
     history.push({
-        type: "Investment",
-        amount: price,
-        date: new Date().toLocaleString()
+        type:"Investment",
+        amount:price,
+        date:new Date().toLocaleString()
     });
 
     localStorage.setItem("history", JSON.stringify(history));
@@ -95,50 +97,6 @@ function buyPlan(price) {
 
     alert("Plan purchased successfully!");
         }
-
-    localStorage.setItem("balance", balance);
-
-    let history = JSON.parse(localStorage.getItem("history") || "[]");
-
-    history.push({
-        type: "Investment",
-        amount: price,
-        date: new Date().toLocaleString()
-    });
-
-    localStorage.setItem("history", JSON.stringify(history));
-
-    loadBalance();
-
-    alert("Plan purchased successfully!");
-}
-
-
-// History
-function loadHistory(){
-}
-    localStorage.setItem("balance", balance);
-
-    let history = JSON.parse(localStorage.getItem("history") || "[]");
-
-    history.push({
-        type: "Investment",
-        amount: price,
-        date: new Date().toLocaleString()
-    });
-
-    localStorage.setItem("history", JSON.stringify(history));
-
-    loadBalance();
-
-    alert("Plan purchased successfully!");
-}
-
-    balance -= price;
-    localStorage.setItem("balance", balance);
-
-    let history = JSON.parse(localStorage.getItem("history")) || [];
-
     history.push({
         type: "Investment",
         amount: price,
