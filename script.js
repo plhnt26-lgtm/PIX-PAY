@@ -102,7 +102,15 @@ function buyPlan(price){
     balance = balance - price;
 
     localStorage.setItem("balance", balance);
+let history = JSON.parse(localStorage.getItem("history")) || [];
 
+history.push({
+    type: "Investment",
+    amount: price,
+    date: new Date().toLocaleString()
+});
+
+localStorage.setItem("history", JSON.stringify(history));
     loadBalance();
 
     alert("Investment Successful!");
