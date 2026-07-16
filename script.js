@@ -90,3 +90,20 @@ function loadBalance(){
     }
 
 }
+function buyPlan(price){
+
+    let balance = Number(localStorage.getItem("balance"));
+
+    if(balance < price){
+        alert("Not enough balance!");
+        return;
+    }
+
+    balance = balance - price;
+
+    localStorage.setItem("balance", balance);
+
+    loadBalance();
+
+    alert("Investment Successful!");
+}
