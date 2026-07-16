@@ -63,6 +63,7 @@ function loadBalance(){
 
 // Buy Plan
 function buyPlan(price) {
+function buyPlan(price) {
 
     let balance = Number(localStorage.getItem("balance")) || 0;
 
@@ -76,6 +77,23 @@ function buyPlan(price) {
     }
 
     balance -= price;
+
+    localStorage.setItem("balance", balance);
+
+    let history = JSON.parse(localStorage.getItem("history") || "[]");
+
+    history.push({
+        type: "Investment",
+        amount: price,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+    loadBalance();
+
+    alert("Plan purchased successfully!");
+}
     localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history") || "[]");
