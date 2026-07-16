@@ -62,17 +62,36 @@ function loadBalance(){
 }
 
 // Buy Plan
-function buyPlan(price){
+function buyPlan(price) {
 
-    const ok = confirm("Do you want to invest $" + price + "?");
-    if(!ok) return;
+    let balance = Number(localStorage.getItem("balance")) || 0;
 
-    let balance = Number(localStorage.getItem("balance"));
-    alert(localStorage.getItem("history"));
-    if(balance < price){
+    if (balance < price) {
         alert("Not enough balance!");
         return;
     }
+
+    if (!confirm("Do you want to buy this plan for $" + price + "?")) {
+        return;
+    }
+
+    balance -= price;
+    localStorage.setItem("balance", balance);
+
+    let history = JSON.parse(localStorage.getItem("history") || "[]");
+
+    history.push({
+        type: "Investment",
+        amount: price,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+    loadBalance();
+
+    alert("Plan purchased successfully!");
+}
 
     balance -= price;
     localStorage.setItem("balance", balance);
