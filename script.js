@@ -235,9 +235,10 @@ function logout() {
 }
 function changeWallet(){
 
+    alert("changeWallet");
+
     let network = document.getElementById("network").value;
     let wallet = document.getElementById("walletAddress");
-
     if(network=="trx"){
         wallet.innerHTML="TCuA1a25GMckqtgu3KAXW3bBxu4kgSatfJ";
     }
