@@ -1080,3 +1080,59 @@ footer{
     transform:translateY(-3px);
     box-shadow:0 10px 25px rgba(108,62,244,.25);
 }
+/* ==========================
+   Settings Premium
+========================== */
+
+.settings-box{
+    max-width:600px;
+    margin:30px auto;
+    background:#fff;
+    border-radius:30px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(108,62,244,.15);
+}
+
+.settings-title{
+    text-align:center;
+    color:#6C3EF4;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.settings-box label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px;
+    background:#F8F7FF;
+    border-radius:15px;
+    margin-bottom:15px;
+    font-size:17px;
+    color:#555;
+    cursor:pointer;
+}
+
+.settings-box input[type="checkbox"]{
+    width:22px;
+    height:22px;
+    accent-color:#6C3EF4;
+}
+
+.settings-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.settings-box button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(108,62,244,.25);
+}
