@@ -842,3 +842,85 @@ footer{
     background:#fff;
     color:#6C3EF4;
 }
+/* ==========================
+   Deposit Premium
+========================== */
+
+.deposit-box{
+    max-width:600px;
+    margin:30px auto;
+    background:#fff;
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 15px 35px rgba(108,62,244,.15);
+}
+
+.deposit-title{
+    text-align:center;
+    color:#6C3EF4;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.deposit-box label{
+    display:block;
+    margin-bottom:8px;
+    color:#555;
+    font-weight:bold;
+}
+
+.deposit-box select,
+.deposit-box input{
+    width:100%;
+    padding:15px;
+    border:2px solid #E8E8E8;
+    border-radius:15px;
+    margin-bottom:18px;
+    font-size:16px;
+    transition:.3s;
+}
+
+.deposit-box select:focus,
+.deposit-box input:focus{
+    border-color:#6C3EF4;
+    box-shadow:0 0 10px rgba(108,62,244,.15);
+}
+
+#walletAddress{
+    background:#F5F7FF;
+    border:2px dashed #6C3EF4;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:bold;
+    color:#333;
+    word-break:break-all;
+}
+
+#walletQR{
+    display:block;
+    margin:20px auto;
+    width:220px;
+    border-radius:20px;
+    padding:10px;
+    background:#fff;
+    box-shadow:0 10px 20px rgba(108,62,244,.15);
+}
+
+.deposit-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.deposit-box button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(108,62,244,.25);
+}
