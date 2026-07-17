@@ -96,14 +96,13 @@ function submitDeposit(){
     let receipt = document.getElementById("receipt").files.length;
     let network = document.getElementById("network").value;
 
-    if(amount<=0 || txid==="" || receipt==0){
-        alert("Please complete all fields.");
+    if(amount <= 0 || txid=="" || receipt==0){
+        alert("Please fill all fields and upload screenshot.");
         return;
     }
 
     let balance = Number(localStorage.getItem("balance"));
     balance += amount;
-
     localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
@@ -119,6 +118,7 @@ function submitDeposit(){
     localStorage.setItem("history", JSON.stringify(history));
 
     loadBalance();
+    loadStats();
 
     alert("Deposit Successful!");
 
