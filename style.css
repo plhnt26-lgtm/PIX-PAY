@@ -701,3 +701,49 @@ footer{
     color:#fff;
     transform:translateY(-5px);
 }
+/* Investment Plans */
+
+.plan-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.plan-card{
+    background:#fff;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(108,62,244,.12);
+    border-top:6px solid #6C3EF4;
+    transition:.3s;
+}
+
+.plan-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(108,62,244,.20);
+}
+
+.plan-card h3{
+    color:#6C3EF4;
+}
+
+.plan-card h1{
+    font-size:42px;
+    margin:15px 0;
+    color:#37B7FF;
+}
+
+.plan-card p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.vip{
+    border-top:6px solid gold;
+}
+
+.vip h3{
+    color:goldenrod;
+}
