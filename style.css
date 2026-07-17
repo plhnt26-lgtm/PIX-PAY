@@ -1,3 +1,27 @@
+/* ==========================
+   PIX PAY Theme
+========================== */
+
+:root{
+    --primary:#6C3EF4;
+    --secondary:#37B7FF;
+    --white:#ffffff;
+    --bg:#F6F8FF;
+    --text:#2B2B2B;
+    --shadow:0 10px 25px rgba(108,62,244,.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
 /* ===== PIX PAY ===== */
 
 *{
