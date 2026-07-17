@@ -816,3 +816,29 @@ footer{
     transform:translateY(-8px);
     border-color:#37B7FF;
 }
+/* VIP Plans */
+
+.vip{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    border:none;
+}
+
+.vip h3{
+    color:#FFD700;
+}
+
+.vip p{
+    color:#fff;
+}
+
+.vip button{
+    background:#FFD700;
+    color:#6C3EF4;
+    font-weight:bold;
+}
+
+.vip button:hover{
+    background:#fff;
+    color:#6C3EF4;
+}
