@@ -224,3 +224,6 @@ function copyAddress(){
     alert("Address Copied!");
 
 }
+function testWallet(){
+    alert("changeWallet is working");
+}
