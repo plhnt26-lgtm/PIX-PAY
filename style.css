@@ -1258,3 +1258,35 @@ header nav a:hover{
     position:relative;
     z-index:2;
 }
+/* Statistics Cards */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:25px 0;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(108,62,244,.12);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.stat-card h3{
+    color:#6C3EF4;
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+    color:#37B7FF;
+    font-size:28px;
+}
