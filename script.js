@@ -96,25 +96,7 @@ function submitDeposit(){
 }
 
     let balance = Number(localStorage.getItem("balance"));
-
-    balance += amount;
-
-    localStorage.setItem("balance", balance);
-
-    let history = JSON.parse(localStorage.getItem("history")) || [];
-
-    history.push({
-        type: "Deposit",
-        amount: amount,
-        date: new Date().toLocaleString()
-    });
-
-    localStorage.setItem("history", JSON.stringify(history));
-
-    alert("Deposit Successful!");
-
-    loadBalance();
-
+ឲ
 }
 
 // ==========================
@@ -124,37 +106,40 @@ function submitWithdraw() {
 
     const amount = Number(document.getElementById("amount").value);
 
+    function submitDeposit(){
+
+    let amount = Number(document.getElementById("amount").value);
+    let txid = document.getElementById("txid").value;
+    let receipt = document.getElementById("receipt").files.length;
+    let network = document.getElementById("network").value;
+
+    if(amount <= 0 || txid=="" || receipt==0){
+        alert("Please fill all fields and upload screenshot.");
+        return;
+    }
+
     let balance = Number(localStorage.getItem("balance"));
-
-    if (amount <= 0) {
-        alert("Enter valid amount");
-        return;
-    }
-
-    if (amount > balance) {
-        alert("Insufficient Balance");
-        return;
-    }
-
-    balance -= amount;
-
+    balance += amount;
     localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
-        type: "Withdraw",
+        type: "Deposit",
+        network: network.toUpperCase(),
         amount: amount,
+        status: "Pending",
         date: new Date().toLocaleString()
     });
 
     localStorage.setItem("history", JSON.stringify(history));
 
-    alert("Withdraw Successful!");
-
     loadBalance();
 
-}
+    alert("Deposit submitted successfully!");
+    }
+
+
 
 // ==========================
 // Buy Investment Plan
