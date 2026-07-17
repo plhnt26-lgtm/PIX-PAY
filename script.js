@@ -131,37 +131,38 @@ function submitWithdraw(){
 
     let amount = Number(document.getElementById("amount").value);
 
-    let balance = Number(localStorage.getItem("balance"));
-
-    if(amount<=0){
+    if(amount <= 0){
         alert("Enter valid amount");
         return;
     }
 
-    if(amount>balance){
-        alert("Insufficient Balance");
+    let balance = Number(localStorage.getItem("balance"));
+
+    if(balance < amount){
+        alert("Not enough balance!");
         return;
     }
 
     balance -= amount;
-
     localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
-        type:"Withdraw",
-        amount:amount,
-        date:new Date().toLocaleString()
+        type: "Withdraw",
+        amount: amount,
+        status: "Pending",
+        date: new Date().toLocaleString()
     });
 
     localStorage.setItem("history", JSON.stringify(history));
 
     loadBalance();
+    loadStats();
 
-    alert("Withdraw Successful!");
+    alert("Withdraw submitted successfully!");
 
-        }
+}
 // ==========================
 // Buy Investment Plan
 // ==========================
