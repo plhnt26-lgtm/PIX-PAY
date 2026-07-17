@@ -101,17 +101,13 @@ function submitDeposit(){
         return;
     }
 
-    let balance = Number(localStorage.getItem("balance"));
-    balance += amount;
-    localStorage.setItem("balance", balance);
-
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
         type:"Deposit",
         network:network.toUpperCase(),
         amount:amount,
-        status:"Completed",
+        status:"Pending",
         date:new Date().toLocaleString()
     });
 
@@ -120,7 +116,7 @@ function submitDeposit(){
     loadBalance();
     loadStats();
 
-    alert("Deposit Successful!");
+    alert("Deposit request submitted! Waiting for Admin approval.");
 
 }
 
