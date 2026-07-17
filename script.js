@@ -72,16 +72,12 @@ function buyPlan(price) {
     }
 
     let confirmBuy = confirm("Buy Plan $" + price + "?");
-
     if(!confirmBuy){
         return;
     }
 
     balance -= price;
-
     localStorage.setItem("balance", balance);
-
-    console.log("New Balance:", balance);
 
     let history = JSON.parse(localStorage.getItem("history") || "[]");
 
@@ -96,6 +92,7 @@ function buyPlan(price) {
     loadBalance();
 
     alert("Plan purchased successfully!");
+}
         }
     history.push({
         type: "Investment",
