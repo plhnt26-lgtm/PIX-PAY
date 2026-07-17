@@ -425,3 +425,16 @@ function rejectRequest(index){
     loadAdminHistory();
 
 }
+function adminLogin(){
+
+    let user = document.getElementById("adminUser").value;
+    let pass = document.getElementById("adminPass").value;
+
+    if(user === "admin" && pass === "123456"){
+        localStorage.setItem("adminLogin","true");
+        window.location.href = "admin.html";
+    }else{
+        alert("Wrong Username or Password");
+    }
+
+              }
