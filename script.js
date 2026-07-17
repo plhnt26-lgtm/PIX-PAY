@@ -81,7 +81,6 @@ function buyPlan(price) {
 
     let history = JSON.parse(localStorage.getItem("history") || "[]");
 
-        }
     history.push({
         type: "Investment",
         amount: price,
