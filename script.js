@@ -312,3 +312,40 @@ window.onload=function(){
     }
 
 };
+function loadStats(){
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    let deposit = 0;
+    let withdraw = 0;
+    let investment = 0;
+
+    history.forEach(function(item){
+
+        if(item.type === "Deposit"){
+            deposit += Number(item.amount);
+        }
+
+        if(item.type === "Withdraw"){
+            withdraw += Number(item.amount);
+        }
+
+        if(item.type === "Investment"){
+            investment += Number(item.amount);
+        }
+
+    });
+
+    if(document.getElementById("totalDeposit")){
+        document.getElementById("totalDeposit").textContent = "$" + deposit.toFixed(2);
+    }
+
+    if(document.getElementById("totalWithdraw")){
+        document.getElementById("totalWithdraw").textContent = "$" + withdraw.toFixed(2);
+    }
+
+    if(document.getElementById("totalInvestment")){
+        document.getElementById("totalInvestment").textContent = "$" + investment.toFixed(2);
+    }
+
+}
