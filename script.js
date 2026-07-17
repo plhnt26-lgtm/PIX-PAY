@@ -22,9 +22,9 @@ function register() {
     }
 
     const user = {
-        fullname: fullname,
-        email: email,
-        password: password
+        fullname,
+        email,
+        password
     };
 
     localStorage.setItem("user", JSON.stringify(user));
@@ -49,15 +49,10 @@ function login() {
     }
 
     if (email === user.email && password === user.password) {
-
         localStorage.setItem("loggedIn", "true");
-
         window.location.href = "dashboard.html";
-
     } else {
-
         alert("Invalid Email or Password");
-
     }
 
 }
@@ -82,80 +77,93 @@ function loadBalance() {
 // ==========================
 function submitDeposit(){
 
-    let amount = document.getElementById("amount").value;
-    let txid = document.getElementById("txid").value;
-    let receipt = document.getElementById("receipt").files.length;
-
-    if(amount=="" || txid=="" || receipt==0){
-        alert("Please fill all fields and upload screenshot.");
-        return;
-    }
-
-    alert("Deposit submitted successfully.\nPlease wait for admin confirmation.");
-
-}
-
-    let balance = Number(localStorage.getItem("balance"));
-ឲ
-}
-
-// ==========================
-// Withdraw
-// ==========================
-function submitWithdraw() {
-
-    const amount = Number(document.getElementById("amount").value);
-
-    function submitDeposit(){
-
     let amount = Number(document.getElementById("amount").value);
     let txid = document.getElementById("txid").value;
     let receipt = document.getElementById("receipt").files.length;
     let network = document.getElementById("network").value;
 
     if(amount <= 0 || txid=="" || receipt==0){
-        alert("Please fill all fields and upload screenshot.");
+        alert("Please fill all fields.");
         return;
     }
 
     let balance = Number(localStorage.getItem("balance"));
     balance += amount;
+
     localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
-        type: "Deposit",
-        network: network.toUpperCase(),
-        amount: amount,
-        status: "Pending",
-        date: new Date().toLocaleString()
+        type:"Deposit",
+        network:network.toUpperCase(),
+        amount:amount,
+        status:"Pending",
+        date:new Date().toLocaleString()
     });
 
     localStorage.setItem("history", JSON.stringify(history));
 
     loadBalance();
 
-    alert("Deposit submitted successfully!");
-    }
+    alert("Deposit Submitted!");
 
-
-
+}
 // ==========================
-// Buy Investment Plan
+// Withdraw
 // ==========================
-function buyPlan(price) {
+function submitWithdraw(){
+
+    let amount = Number(document.getElementById("amount").value);
 
     let balance = Number(localStorage.getItem("balance"));
 
-    if (balance < price) {
+    if(amount <= 0){
+        alert("Enter valid amount.");
+        return;
+    }
+
+    if(amount > balance){
+        alert("Insufficient Balance!");
+        return;
+    }
+
+    balance -= amount;
+
+    localStorage.setItem("balance", balance);
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    history.push({
+        type:"Withdraw",
+        amount:amount,
+        status:"Pending",
+        date:new Date().toLocaleString()
+    });
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+    loadBalance();
+
+    alert("Withdraw Submitted!");
+
+}
+
+// ==========================
+// Buy Investment
+// ==========================
+function buyPlan(price){
+
+    let balance = Number(localStorage.getItem("balance"));
+
+    if(balance < price){
         alert("Not enough balance!");
         return;
     }
 
-    const ok = confirm("Buy $" + price + " Investment Plan?");
-
-    if (!ok) return;
+    if(!confirm("Buy $" + price + " Plan?")){
+        return;
+    }
 
     balance -= price;
 
@@ -164,9 +172,10 @@ function buyPlan(price) {
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
-        type: "Investment",
-        amount: price,
-        date: new Date().toLocaleString()
+        type:"Investment",
+        amount:price,
+        status:"Running",
+        date:new Date().toLocaleString()
     });
 
     localStorage.setItem("history", JSON.stringify(history));
@@ -180,78 +189,57 @@ function buyPlan(price) {
 // ==========================
 // History
 // ==========================
-function loadHistory() {
+function loadHistory(){
 
-    const history = JSON.parse(localStorage.getItem("history")) || [];
+    let history = JSON.parse(localStorage.getItem("history")) || [];
 
-    const historyList = document.getElementById("historyList");
+    let historyList = document.getElementById("historyList");
 
-    if (!historyList) return;
+    if(!historyList) return;
 
-    if (history.length === 0) {
-
-        historyList.innerHTML = "<p>No history found.</p>";
-
+    if(history.length===0){
+        historyList.innerHTML="<p>No history found.</p>";
         return;
-
     }
 
-    let html = "";
+    let html="";
 
-    history.reverse().forEach(function(item) {
+    history.slice().reverse().forEach(function(item){
 
         html += `
-<div class="card">
-    <h3>${item.type}</h3>
+        <div class="card" style="margin-top:15px;">
+            <h3>${item.type}</h3>
+            ${item.network ? `<p><b>Network:</b> ${item.network}</p>` : ""}
+            <p><b>Amount:</b> $${item.amount}</p>
+            ${item.status ? `<p><b>Status:</b> ${item.status}</p>` : ""}
+            <p><b>Date:</b> ${item.date}</p>
+        </div>
+        `;
 
-    ${item.network ? `<p><strong>Network:</strong> ${item.network}</p>` : ""}
-
-    <p><strong>Amount:</strong> $${item.amount}</p>
-
-    ${item.status ? `<p><strong>Status:</strong> ${item.status}</p>` : ""}
-
-    <p><strong>Date:</strong> ${item.date}</p>
-</div>
-`;
+    });
 
     historyList.innerHTML = html;
 
 }
 
 // ==========================
-// function
+// Logout
 // ==========================
-function logout() {
+function logout(){
 
     localStorage.removeItem("loggedIn");
+    window.location.href="index.html";
 
-    window.location.href = "index.html";
-}function changeWallet(){
-
-    let network = document.getElementById("network").value;
-    let wallet = document.getElementById("walletAddress");
-    let qr = document.getElementById("walletQR");
-
-    if(network=="trx"){
-        wallet.textContent="TCuA1a25GMckqtgu3KAXW3bBxu4kgSatfJ";
-    }
-
-    if(network=="bnb"){
-        wallet.textContent="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
-    }
-
-    if(network=="bsc"){
-        wallet.textContent="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
-    }
-
-    if(network=="sol"){
-        wallet.textContent="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
-    }
-
-    if(network=="usdtsol"){
-        wallet.textContent="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
-    }
-
-    qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(wallet.textContent);
 }
 
+// ==========================
+// Wallet
+// ==========================
+function changeWallet(){
+
+    let network=document.getElementById("network").value;
+    let wallet=document.getElementById("walletAddress");
+    let qr=document.getElementById("walletQR");
+
+    if(network=="trx"){
+        wallet.textContent="TCuA1a25GMck
