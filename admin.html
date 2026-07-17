@@ -8,7 +8,11 @@
 </head>
 
 <body onload="loadAdminHistory()">
-
+<script>
+if(localStorage.getItem("adminLogin")!="true"){
+    window.location.href="admin-login.html";
+}
+</script>
 <header>
     <h1>PIX PAY ADMIN</h1>
 </header>
