@@ -224,49 +224,39 @@ function loadHistory() {
 }
 
 // ==========================
-// Logout
+// function
 // ==========================
 function logout() {
 
     localStorage.removeItem("loggedIn");
 
     window.location.href = "index.html";
-
-}
-function changeWallet(){
-
-    alert("changeWallet");
+}function changeWallet(){
 
     let network = document.getElementById("network").value;
     let wallet = document.getElementById("walletAddress");
+    let qr = document.getElementById("walletQR");
+
     if(network=="trx"){
-        wallet.innerHTML="TCuA1a25GMckqtgu3KAXW3bBxu4kgSatfJ";
+        wallet.textContent="TCuA1a25GMckqtgu3KAXW3bBxu4kgSatfJ";
     }
 
     if(network=="bnb"){
-        wallet.innerHTML="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
+        wallet.textContent="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
     }
 
     if(network=="bsc"){
-        wallet.innerHTML="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
+        wallet.textContent="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
     }
 
     if(network=="sol"){
-        wallet.innerHTML="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
+        wallet.textContent="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
     }
 
     if(network=="usdtsol"){
-        wallet.innerHTML="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
+        wallet.textContent="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
     }
 
+    qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(wallet.textContent);
 }
 
-function copyAddress(){
-
-    let address=document.getElementById("walletAddress").innerText;
-
-    navigator.clipboard.writeText(address);
-
-    alert("Address Copied!");
-
-}
