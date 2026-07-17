@@ -104,39 +104,6 @@ function submitWithdraw() {
 
 const amount = Number(document.getElementById("amount").value);  
 
-function submitDeposit(){  
-
-let amount = Number(document.getElementById("amount").value);  
-let txid = document.getElementById("txid").value;  
-let receipt = document.getElementById("receipt").files.length;  
-let network = document.getElementById("network").value;  
-
-if(amount <= 0 || txid=="" || receipt==0){  
-    alert("Please fill all fields and upload screenshot.");  
-    return;  
-}  
-
-let balance = Number(localStorage.getItem("balance"));  
-balance += amount;  
-localStorage.setItem("balance", balance);  
-
-let history = JSON.parse(localStorage.getItem("history")) || [];  
-
-history.push({  
-    type: "Deposit",  
-    network: network.toUpperCase(),  
-    amount: amount,  
-    status: "Pending",  
-    date: new Date().toLocaleString()  
-});  
-
-localStorage.setItem("history", JSON.stringify(history));  
-
-loadBalance();  
-
-alert("Deposit submitted successfully!");  
-}
-
 // ==========================
 // Buy Investment Plan
 // ==========================
