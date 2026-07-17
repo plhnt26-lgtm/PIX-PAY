@@ -985,3 +985,33 @@ footer{
     transform:translateY(-3px);
     box-shadow:0 10px 25px rgba(55,183,255,.25);
 }
+/* ==========================
+   History Premium
+========================== */
+
+.history-box{
+    max-width:900px;
+    margin:30px auto;
+    background:#fff;
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 15px 35px rgba(108,62,244,.15);
+}
+
+.history-title{
+    text-align:center;
+    font-size:30px;
+    color:#6C3EF4;
+    margin-bottom:25px;
+}
+
+#historyList .card{
+    border-left:6px solid #6C3EF4;
+    margin-bottom:18px;
+    transition:.3s;
+}
+
+#historyList .card:hover{
+    transform:translateX(6px);
+    border-left-color:#37B7FF;
+}
