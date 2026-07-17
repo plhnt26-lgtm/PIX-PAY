@@ -924,3 +924,64 @@ footer{
     transform:translateY(-3px);
     box-shadow:0 10px 25px rgba(108,62,244,.25);
 }
+/* ==========================
+   Withdraw Premium
+========================== */
+
+.withdraw-box{
+    max-width:600px;
+    margin:30px auto;
+    background:#fff;
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 15px 35px rgba(55,183,255,.15);
+}
+
+.withdraw-title{
+    text-align:center;
+    color:#37B7FF;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.withdraw-box label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#555;
+}
+
+.withdraw-box input,
+.withdraw-box select{
+    width:100%;
+    padding:15px;
+    border:2px solid #E8E8E8;
+    border-radius:15px;
+    margin-bottom:18px;
+    font-size:16px;
+    transition:.3s;
+}
+
+.withdraw-box input:focus,
+.withdraw-box select:focus{
+    border-color:#37B7FF;
+    box-shadow:0 0 10px rgba(55,183,255,.18);
+}
+
+.withdraw-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(135deg,#37B7FF,#6C3EF4);
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.withdraw-box button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(55,183,255,.25);
+}
