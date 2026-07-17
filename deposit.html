@@ -25,18 +25,33 @@
 <div class="main-content">
 
     <div class="card">
+<h2 style="color:#6C3EF4;">Deposit</h2>
 
-        <h2 style="color:#6C3EF4;">Deposit Money</h2>
+<label>Select Network</label>
 
-        <br>
+<select id="network" onchange="changeWallet()">
+    <option value="trx">USDT TRC20</option>
+    <option value="bnb">BNB BEP20</option>
+    <option value="bsc">USDT BSC</option>
+    <option value="sol">SOL</option>
+    <option value="usdtsol">USDT SOL</option>
+</select>
 
-        <input type="number" placeholder="Enter Amount">
+<br><br>
 
-        <input type="text" placeholder="Payment Method">
+<h3>Deposit Address</h3>
 
-        <br><br>
+<p id="walletAddress" style="word-break:break-all;">
+TCuA1a25GMckqtgu3KAXW3bBxu4kgSatfJ
+</p>
 
-        <button onclick="submitDeposit()">Submit Deposit</button>
+<button onclick="copyAddress()">Copy Address</button>
+
+<br><br>
+
+<input type="number" id="amount" placeholder="Enter Amount">
+
+<button onclick="submitDeposit()">Submit Deposit</button>
 
     </div>
 
