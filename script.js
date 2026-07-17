@@ -201,14 +201,18 @@ function loadHistory() {
     history.reverse().forEach(function(item) {
 
         html += `
-        <div class="card">
-            <h3>${item.type}</h3>
-            <p><strong>Amount:</strong> $${item.amount}</p>
-            <p><strong>Date:</strong> ${item.date}</p>
-        </div>
-        `;
+<div class="card">
+    <h3>${item.type}</h3>
 
-    });
+    ${item.network ? `<p><strong>Network:</strong> ${item.network}</p>` : ""}
+
+    <p><strong>Amount:</strong> $${item.amount}</p>
+
+    ${item.status ? `<p><strong>Status:</strong> ${item.status}</p>` : ""}
+
+    <p><strong>Date:</strong> ${item.date}</p>
+</div>
+`;
 
     historyList.innerHTML = html;
 
