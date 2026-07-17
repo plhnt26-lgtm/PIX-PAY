@@ -80,14 +80,20 @@ function loadBalance() {
 // ==========================
 // Deposit
 // ==========================
-function submitDeposit() {
+function submitDeposit(){
 
-    const amount = Number(document.getElementById("amount").value);
+    let amount = document.getElementById("amount").value;
+    let txid = document.getElementById("txid").value;
+    let receipt = document.getElementById("receipt").files.length;
 
-    if (amount <= 0) {
-        alert("Enter valid amount");
+    if(amount=="" || txid=="" || receipt==0){
+        alert("Please fill all fields and upload screenshot.");
         return;
     }
+
+    alert("Deposit submitted successfully.\nPlease wait for admin confirmation.");
+
+}
 
     let balance = Number(localStorage.getItem("balance"));
 
