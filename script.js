@@ -394,3 +394,34 @@ function loadAdminHistory(){
     admin.innerHTML = html;
 
 }
+// ==========================
+// Admin Approve / Reject
+// ==========================
+
+function approveRequest(index){
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    history[index].status = "Completed";
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+    alert("Request Approved!");
+
+    loadAdminHistory();
+
+}
+
+function rejectRequest(index){
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    history[index].status = "Rejected";
+
+    localStorage.setItem("history", JSON.stringify(history));
+
+    alert("Request Rejected!");
+
+    loadAdminHistory();
+
+}
