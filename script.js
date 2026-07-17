@@ -96,10 +96,6 @@ alert("Deposit submitted successfully.\nPlease wait for admin confirmation.");
 
 }
 
-let balance = Number(localStorage.getItem("balance"));
-
-ឲ
-}
 
 // ==========================
 // Withdraw
