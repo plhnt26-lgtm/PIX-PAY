@@ -163,21 +163,21 @@ let html = "";
 
 history.reverse().forEach(function(item) {  
 
+    history.reverse().forEach(function(item) {
+
     html += `
+    <div class="card">
+        <h3>${item.type}</h3>
+        ${item.network ? `<p><strong>Network:</strong> ${item.network}</p>` : ""}
+        <p><strong>Amount:</strong> $${item.amount}</p>
+        ${item.status ? `<p><strong>Status:</strong> ${item.status}</p>` : ""}
+        <p><strong>Date:</strong> ${item.date}</p>
+    </div>
+    `;
 
-<div class="card">  
-    <h3>${item.type}</h3>  ${item.network ? `<p><strong>Network:</strong> ${item.network}</p>` : ""}  
+});
 
-<p><strong>Amount:</strong> $${item.amount}</p>  
-
-${item.status ? `<p><strong>Status:</strong> ${item.status}</p>` : ""}  
-
-<p><strong>Date:</strong> ${item.date}</p>
-
-</div>  
-`;  historyList.innerHTML = html;
-
-}
+historyList.innerHTML = html;
 
 // ==========================
 // function
@@ -188,7 +188,8 @@ localStorage.removeItem("loggedIn");
 
 window.location.href = "index.html";
 
-}function changeWallet(){
+}
+    function changeWallet(){
 
 let network = document.getElementById("network").value;  
 let wallet = document.getElementById("walletAddress");  
