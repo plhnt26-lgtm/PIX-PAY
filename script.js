@@ -215,4 +215,12 @@ function changeWallet(){
         qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(address);
     }
 
+function copyAddress(){
+
+    let address = document.getElementById("walletAddress").textContent;
+
+    navigator.clipboard.writeText(address);
+
+    alert("Address Copied!");
+
 }
