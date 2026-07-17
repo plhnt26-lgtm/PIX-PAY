@@ -350,3 +350,47 @@ function loadStats(){
     }
 
 }
+// ==========================
+// Admin Panel
+// ==========================
+
+function loadAdminHistory(){
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    let admin = document.getElementById("adminHistory");
+
+    if(!admin) return;
+
+    if(history.length === 0){
+        admin.innerHTML = "<p>No requests found.</p>";
+        return;
+    }
+
+    let html = "";
+
+    history.forEach(function(item,index){
+
+        html += `
+        <div class="card" style="margin-bottom:15px;">
+            <h3>${item.type}</h3>
+
+            ${item.network ? `<p><strong>Network:</strong> ${item.network}</p>` : ""}
+
+            <p><strong>Amount:</strong> $${item.amount}</p>
+
+            <p><strong>Status:</strong> ${item.status || "Completed"}</p>
+
+            <p><strong>Date:</strong> ${item.date}</p>
+
+            <button onclick="approveRequest(${index})">✅ Approve</button>
+
+            <button onclick="rejectRequest(${index})">❌ Reject</button>
+
+        </div>
+        `;
+    });
+
+    admin.innerHTML = html;
+
+}
