@@ -227,3 +227,25 @@ button:hover{
 .plan-card button{
     margin-top:15px;
     }
+.balance-card{
+    background:linear-gradient(135deg,#6C3EF4,#8B5CF6);
+    color:white;
+    text-align:center;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(108,62,244,.3);
+}
+
+.balance-card h2{
+    margin-bottom:10px;
+}
+
+.balance-card p{
+    font-size:16px;
+    opacity:.9;
+}
+
+.balance-card h1{
+    font-size:40px;
+    margin-top:10px;
+    }
