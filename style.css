@@ -1170,3 +1170,40 @@ footer{
 .main-content{
     padding-bottom:90px;
 }
+/* Premium Header */
+
+header{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    padding:18px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 8px 20px rgba(108,62,244,.25);
+}
+
+header h1{
+    font-size:28px;
+    font-weight:bold;
+    margin:0;
+}
+
+header nav{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+header nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+header nav a:hover{
+    color:#FFD700;
+}
