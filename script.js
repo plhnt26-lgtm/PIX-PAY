@@ -427,14 +427,19 @@ function rejectRequest(index){
 }
 function adminLogin(){
 
-    let user = document.getElementById("adminUser").value;
-    let pass = document.getElementById("adminPass").value;
+    let email = document.getElementById("adminUser").value.trim();
+    let pass = document.getElementById("adminPass").value.trim();
 
-    if(user === "admin" && pass === "123456"){
+    if(email === "admin@gmail.com" && pass === "123456"){
+
         localStorage.setItem("adminLogin","true");
+
         window.location.href = "admin.html";
+
     }else{
-        alert("Wrong Username or Password");
+
+        alert("Wrong Email or Password");
+
     }
 
-              }
+        }
