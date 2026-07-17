@@ -191,6 +191,12 @@ window.location.href = "index.html";
 }
 function changeWallet(){
 
+    alert("changeWallet");
+
+    let network = document.getElementById("network").value;
+    ...
+}
+
     let network = document.getElementById("network").value;
     let wallet = document.getElementById("walletAddress");
     let qr = document.getElementById("walletQR");
