@@ -70,6 +70,151 @@ nav a:hover{
     color:#6C3EF4;
     transform:translateY(-2px);
 }
+/* ==========================
+   Main Content
+========================== */
+
+.main-content{
+    max-width:1100px;
+    margin:30px auto;
+    padding:20px;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(108,62,244,.12);
+    border:1px solid rgba(55,183,255,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(108,62,244,.18);
+}
+
+.card h2,
+.card h3{
+    color:#6C3EF4;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   Input & Select
+========================== */
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:15px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+select:focus{
+    border-color:#6C3EF4;
+    box-shadow:0 0 10px rgba(108,62,244,.2);
+}
+
+/* ==========================
+   Button
+========================== */
+
+button{
+    width:100%;
+    padding:14px;
+    background:#6C3EF4;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#37B7FF;
+    transform:translateY(-2px);
+}
+/* ==========================
+   Dashboard
+========================== */
+
+.balance-card{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    padding:30px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(108,62,244,.25);
+    margin-bottom:25px;
+}
+
+.balance-card h3{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.balance-card h1{
+    color:#fff;
+    font-size:42px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+/* Dashboard Grid */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.dashboard-item{
+    background:#fff;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(108,62,244,.12);
+    border-top:5px solid #6C3EF4;
+    transition:.3s;
+}
+
+.dashboard-item:hover{
+    transform:translateY(-5px);
+    border-top:5px solid #37B7FF;
+}
+
+.dashboard-item h2{
+    color:#6C3EF4;
+    margin-bottom:10px;
+}
+
+.dashboard-item p{
+    color:#666;
+    font-size:15px;
+}
+
+.dashboard-item span{
+    display:block;
+    margin-top:10px;
+    font-size:22px;
+    font-weight:bold;
+    color:#37B7FF;
+}
 /* ===== PIX PAY ===== */
 
 *{
@@ -350,3 +495,102 @@ button:hover{
 body{
     padding-bottom:80px;
 }
+/* ==========================
+   Footer
+========================== */
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+    font-size:14px;
+    margin-top:30px;
+}
+
+/* ==========================
+   QR Code
+========================== */
+
+#walletQR{
+    display:block;
+    margin:20px auto;
+    width:220px;
+    border-radius:15px;
+    background:#fff;
+    padding:10px;
+    box-shadow:0 8px 20px rgba(108,62,244,.15);
+}
+
+/* ==========================
+   Wallet Address
+========================== */
+
+#walletAddress{
+    background:#F3F5FF;
+    border:2px dashed #6C3EF4;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    word-break:break-all;
+    font-weight:bold;
+    color:#333;
+    margin:15px 0;
+}
+
+/* ==========================
+   Animation
+========================== */
+
+.card,
+.balance-card,
+.dashboard-item{
+    animation:fadeUp .5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   Mobile Responsive
+========================== */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    nav{
+        gap:8px;
+    }
+
+    nav a{
+        font-size:14px;
+        padding:8px 14px;
+    }
+
+    .balance-card h1{
+        font-size:32px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    button{
+        font-size:15px;
+    }
+
+    #walletQR{
+        width:180px;
+    }
+
+   }
