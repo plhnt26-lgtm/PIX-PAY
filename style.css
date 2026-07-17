@@ -1207,3 +1207,54 @@ header nav a{
 header nav a:hover{
     color:#FFD700;
 }
+/* ==========================
+   Dashboard Banner
+========================== */
+
+.banner-card{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    border-radius:30px;
+    padding:30px;
+    margin-bottom:25px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(108,62,244,.25);
+}
+
+.banner-card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:rgba(255,255,255,.12);
+    border-radius:50%;
+    top:-70px;
+    right:-60px;
+}
+
+.banner-card::after{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    bottom:-40px;
+    left:-30px;
+}
+
+.banner-card h2{
+    margin:0;
+    font-size:28px;
+    position:relative;
+    z-index:2;
+}
+
+.banner-card p{
+    margin-top:10px;
+    font-size:16px;
+    opacity:.95;
+    position:relative;
+    z-index:2;
+}
