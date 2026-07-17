@@ -189,32 +189,30 @@ localStorage.removeItem("loggedIn");
 window.location.href = "index.html";
 
 }
-    function changeWallet(){
+function changeWallet(){
 
-let network = document.getElementById("network").value;  
-let wallet = document.getElementById("walletAddress");  
-let qr = document.getElementById("walletQR");  
+    let network = document.getElementById("network").value;
+    let wallet = document.getElementById("walletAddress");
+    let qr = document.getElementById("walletQR");
 
-if(network=="trx"){  
-    wallet.textContent="TCuA1a25GMckqtgu3KAXW3bBxu4kgSatfJ";  
-}  
+    let address = "";
 
-if(network=="bnb"){  
-    wallet.textContent="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";  
-}  
-
-if(network=="bsc"){  
-    wallet.textContent="0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";  
-}  
-
-if(network=="sol"){  
-    wallet.textContent="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";  
-}  
-
-if(network=="usdtsol"){  
-    wallet.textContent="FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";  
-}  
-
-qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(wallet.textContent);
-
+    if(network === "trx"){
+        address = "TCuA1a25GMckqtgu3KAXW3bBxu4kgSatfJ";
+    }else if(network === "bnb"){
+        address = "0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
+    }else if(network === "bsc"){
+        address = "0x6680AF9efF2dE9f9bfAbac09520Bd8Fb1F5f6E0a";
+    }else if(network === "sol"){
+        address = "FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
+    }else if(network === "usdtsol"){
+        address = "FHYuDadDJfRKQrLNWXCHsZUbxZMDA1JybnFQmSvZnPfC";
     }
+
+    wallet.textContent = address;
+
+    if(qr){
+        qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(address);
+    }
+
+}
