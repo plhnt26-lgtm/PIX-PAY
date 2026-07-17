@@ -398,6 +398,16 @@ function approveRequest(index){
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
+    if(history[index].type === "Deposit" && history[index].status === "Pending"){
+
+        let balance = Number(localStorage.getItem("balance")) || 0;
+
+        balance += Number(history[index].amount);
+
+        localStorage.setItem("balance", balance);
+
+    }
+
     history[index].status = "Completed";
 
     localStorage.setItem("history", JSON.stringify(history));
@@ -406,7 +416,7 @@ function approveRequest(index){
 
     loadAdminHistory();
 
-}
+                             }
 
 function rejectRequest(index){
 
