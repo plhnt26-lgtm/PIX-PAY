@@ -82,113 +82,269 @@
 
 <div class="plan-grid">
 
-    <div class="plan-card">
-        <h3>Starter</h3>
-        <h1>$5</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $0.73</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(5)">Invest Now</button>
+<div class="plan-card">
+    <h3>$5 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$2.50</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown5">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$0.73</h3>
+        </div>
     </div>
 
-    <div class="plan-card">
-        <h3>Basic</h3>
-        <h1>$10</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $1.45</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(10)">Invest Now</button>
+    <button onclick="buyPlan(5)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$10 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$5.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown10">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$1.45</h3>
+        </div>
     </div>
 
-    <div class="plan-card">
-        <h3>Silver</h3>
-        <h1>$20</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $2.90</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(20)">Invest Now</button>
+    <button onclick="buyPlan(10)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$20 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$10.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown20">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$2.90</h3>
+        </div>
     </div>
 
-    <div class="plan-card">
-        <h3>Gold</h3>
-        <h1>$40</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $5.80</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(40)">Invest Now</button>
+    <button onclick="buyPlan(20)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$40 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$20.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown40">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$5.80</h3>
+        </div>
     </div>
 
-    <div class="plan-card">
-        <h3>Premium</h3>
-        <h1>$80</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $12</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(80)">Invest Now</button>
+    <button onclick="buyPlan(40)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$80 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$40.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown80">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$12.00</h3>
+        </div>
     </div>
 
-    <div class="plan-card">
-        <h3>Pro</h3>
-        <h1>$160</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $24</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(160)">Invest Now</button>
+    <button onclick="buyPlan(80)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$160 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$80.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown160">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$24.00</h3>
+        </div>
     </div>
 
-    <div class="plan-card">
-        <h3>Elite</h3>
-        <h1>$320</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $48</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(320)">Invest Now</button>
+    <button onclick="buyPlan(160)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$320 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$160.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown320">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$48.00</h3>
+        </div>
     </div>
 
-    <div class="plan-card">
-        <h3>Diamond</h3>
-        <h1>$640</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $96</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(640)">Invest Now</button>
+    <button onclick="buyPlan(320)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$640 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$320.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown640">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$96.00</h3>
+        </div>
     </div>
 
-    <div class="plan-card vip">
-        <h3>VIP 1</h3>
-        <h1>$1280</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $195</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(1280)">Invest Now</button>
+    <button onclick="buyPlan(640)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$1280 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$640.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown1280">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$195.00</h3>
+        </div>
     </div>
 
-    <div class="plan-card vip">
-        <h3>VIP 2</h3>
-        <h1>$2560</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $400</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(2560)">Invest Now</button>
+    <button onclick="buyPlan(1280)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$2560 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$1280.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown2560">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$400.00</h3>
+        </div>
     </div>
 
-    <div class="plan-card vip">
-        <h3>VIP 3</h3>
-        <h1>$6000</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $900</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(6000)">Invest Now</button>
+    <button onclick="buyPlan(2560)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$6000 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$3000.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown6000">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$900.00</h3>
+        </div>
     </div>
 
-    <div class="plan-card vip">
-        <h3>VIP 4</h3>
-        <h1>$10000</h1>
-        <p>Duration: 20 Days</p>
-        <p>Daily Profit: $1580</p>
-        <p>Principal Return: 50%</p>
-        <button onclick="buyPlan(10000)">Invest Now</button>
+    <button onclick="buyPlan(6000)">Invest Now</button>
+</div>
+
+<div class="plan-card">
+    <h3>$10000 Plan</h3>
+    <p>20 Days</p>
+
+    <div class="plan-info">
+        <div class="info-box">
+            <small>Principal</small>
+            <h3>$5000.00</h3>
+        </div>
+        <div class="info-box">
+            <small>Next Profit</small>
+            <h3 id="countdown10000">23:59:59</h3>
+        </div>
+        <div class="info-box">
+            <small>Daily Profit</small>
+            <h3 style="color:#00b050;">$1580.00</h3>
+        </div>
     </div>
+
+    <button onclick="buyPlan(10000)">Invest Now</button>
+    </div>    
 
     </div>
     
