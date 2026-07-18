@@ -106,8 +106,8 @@ function submitDeposit(){
 
     let amount = Number(document.getElementById("amount").value);
     let network = document.getElementById("network").value;
-    let txHash = document.getElementById("txHash").value;
-    let image = document.getElementById("paymentImage").files[0];
+    let txHash = document.getElementById("txid").value;
+    let image = document.getElementById("receipt").files[0];
 
     if(amount <= 0 || txHash == "" || !image){
         alert("Please fill all fields and upload screenshot.");
@@ -121,13 +121,13 @@ function submitDeposit(){
         let history = JSON.parse(localStorage.getItem("history")) || [];
 
         history.push({
-            type: "Deposit",
-            network: network.toUpperCase(),
-            amount: amount,
-            txHash: txHash,
-            image: reader.result,
-            status: "Pending",
-            date: new Date().toLocaleString()
+            type:"Deposit",
+            network:network.toUpperCase(),
+            amount:amount,
+            txHash:txHash,
+            image:reader.result,
+            status:"Pending",
+            date:new Date().toLocaleString()
         });
 
         localStorage.setItem("history", JSON.stringify(history));
