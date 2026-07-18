@@ -1208,12 +1208,3 @@ html,body{
     transition:.3s;
     z-index:99999;
 }
-.toast{
-    position:fixed;
-    top:20px;
-    right:20px;
-    background:#6C3EF4;
-    color:#fff;
-    padding:15px 20px;
-    border-radius:12px;
-}
