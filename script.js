@@ -173,8 +173,21 @@ function buyPlan(price){
     }
 
     balance -= price;
-
     localStorage.setItem("balance", balance);
+
+    let investments = JSON.parse(localStorage.getItem("investments")) || [];
+
+    investments.push({
+        amount: price,
+        daily: plans[price].daily,
+        days: 20,
+        start: Date.now(),
+        lastClaim: Date.now(),
+        claimedDays: 0,
+        finished: false
+    });
+
+    localStorage.setItem("investments", JSON.stringify(investments));
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
@@ -187,9 +200,9 @@ function buyPlan(price){
     localStorage.setItem("history", JSON.stringify(history));
 
     loadBalance();
+    loadStats();
 
     alert("Investment Successful!");
-
 }
 
 // ==========================
