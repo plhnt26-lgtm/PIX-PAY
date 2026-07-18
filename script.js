@@ -321,6 +321,8 @@ function copyAddress(){
 // ==========================
 window.onload = function(){
 
+    autoProfit();
+
     loadBalance();
     loadStats();
 
