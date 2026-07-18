@@ -1260,3 +1260,27 @@ img{
     max-width:100%;
     height:auto;
 }
+html,body{
+    overflow-x:hidden;
+}
+
+.main-content{
+    width:100%;
+    max-width:100%;
+    padding:15px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:10px;
+}
+
+.plan-grid{
+    display:grid;
+    grid-template-columns:1fr;
+}
+
+.stat-card{
+    min-width:0;
+}
