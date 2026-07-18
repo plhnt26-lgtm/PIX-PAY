@@ -19,11 +19,21 @@ if(localStorage.getItem("adminLogin")!="true"){
 
 <div class="main-content">
 
-    <div class="card">
-        <h2>Deposit & Withdraw Requests</h2>
+<div class="stats-grid">
 
-        <div id="adminHistory"></div>
+    <div class="stat-card card">
+        <h3>Total Deposit</h3>
+        <h2 id="adminDeposit">$0.00</h2>
+    </div>
 
+    <div class="stat-card card">
+        <h3>Total Withdraw</h3>
+        <h2 id="adminWithdraw">$0.00</h2>
+    </div>
+
+    <div class="stat-card card">
+        <h3>Pending</h3>
+        <h2 id="adminPending">0</h2>
     </div>
 
 </div>
