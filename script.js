@@ -320,7 +320,6 @@ function copyAddress(){
 // Auto Load
 // ==========================
 window.onload = function(){
-window.onload=function(){
 
     autoProfit();
 
