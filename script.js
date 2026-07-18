@@ -517,3 +517,41 @@ function autoProfit(){
     loadBalance();
     loadStats();
     }
+// ==========================
+// Countdown 24 Hours
+// ==========================
+
+function updateCountdown(){
+
+    let investments = JSON.parse(localStorage.getItem("investments")) || [];
+
+    investments.forEach(plan=>{
+
+        if(plan.finished) return;
+
+        let id = "countdown" + plan.amount;
+
+        let el = document.getElementById(id);
+
+        if(!el) return;
+
+        let next = plan.lastClaim + 86400000;
+
+        let diff = next - Date.now();
+
+        if(diff < 0) diff = 0;
+
+        let h = Math.floor(diff / 3600000);
+        let m = Math.floor((diff % 3600000) / 60000);
+        let s = Math.floor((diff % 60000) / 1000);
+
+        el.innerHTML =
+            String(h).padStart(2,"0")+":"+
+            String(m).padStart(2,"0")+":"+
+            String(s).padStart(2,"0");
+
+    });
+
+}
+
+setInterval(updateCountdown,1000);
