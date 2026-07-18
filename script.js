@@ -139,9 +139,6 @@ function submitWithdraw(){
         return;
     }
 
-    balance -= amount;
-    localStorage.setItem("balance", balance);
-
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
