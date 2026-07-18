@@ -1,7 +1,20 @@
 // ==========================
 // PIX PAY - PART 
 // ==========================
-
+const plans = {
+    5:{daily:0.73,days:20},
+    10:{daily:1.45,days:20},
+    20:{daily:2.9,days:20},
+    40:{daily:5.8,days:20},
+    80:{daily:12,days:20},
+    160:{daily:24,days:20},
+    320:{daily:48,days:20},
+    640:{daily:96,days:20},
+    1280:{daily:195,days:20},
+    2560:{daily:400,days:20},
+    6000:{daily:900,days:20},
+    10000:{daily:1580,days:20}
+};
 // Default Balance
 if (localStorage.getItem("balance") == null) {
     localStorage.setItem("balance", "1000");
