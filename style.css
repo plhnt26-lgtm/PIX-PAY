@@ -1203,18 +1203,11 @@ header nav a:hover{
 }
 
 .stat-card h2{
-    font-size:22px;
+    color:#37B7FF;
+    font-size:18px;
+    font-weight:bold;
     word-break:break-word;
-}
-/* Mobile Responsive */
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    overflow-x:hidden;
+    overflow-wrap:break-word;
 }
 
 .main-content{
