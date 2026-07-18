@@ -463,6 +463,7 @@ function approveRequest(index){
     localStorage.setItem("balance", balance);
 
     history[index].status="Completed";
+    localStorage.setItem("notification","✅ Your deposit has been approved.");
 
     localStorage.setItem("history", JSON.stringify(history));
 
@@ -476,6 +477,7 @@ function rejectRequest(index){
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history[index].status = "Rejected";
+    localStorage.setItem("notification","❌ Your deposit has been rejected.");
 
     localStorage.setItem("history", JSON.stringify(history));
 
