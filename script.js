@@ -470,6 +470,23 @@ function rejectRequest(index){
     loadAdminHistory();
 
 }
+function adminLogin(){
+
+    let email=document.getElementById("adminUser").value.trim();
+    let pass=document.getElementById("adminPass").value.trim();
+
+    if(email==="admin@gmail.com" && pass==="123456"){
+
+        localStorage.setItem("adminLogin","true");
+        window.location.href="admin.html";
+
+    }else{
+
+        alert("Wrong Email or Password");
+
+    }
+
+}
 
 // ==========================
 // AUTO PROFIT + COUNTDOWN
