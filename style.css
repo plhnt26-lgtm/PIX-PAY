@@ -79,12 +79,13 @@ nav a:hover{
 /* ==========================
    Main Content
 ========================== */
-
 .main-content{
-    max-width:1100px;
-    margin:30px auto;
-    padding:20px;
+    width:100%;
+    max-width:100%;
+    padding:15px;
 }
+
+
 
 /* ==========================
    Card
@@ -286,7 +287,7 @@ input:focus{
 }
 
 /* Footer */
-}
+
 
 select,
 input{
@@ -997,9 +998,7 @@ footer{
     margin-top:3px;
 }
 
-.main-content{
-    padding-bottom:90px;
-}
+
 /* Premium Header */
 
 header{
@@ -1121,12 +1120,7 @@ header nav a:hover{
     overflow-wrap:break-word;
 }
 
-.main-content{
-    width:100%;
-    max-width:420px;
-    margin:auto;
-    padding:15px;
-}
+
 
 stat.card{
     width:100%;
@@ -1154,12 +1148,6 @@ img{
 }
 html,body{
     overflow-x:hidden;
-}
-
-.main-content{
-    width:100%;
-    max-width:100%;
-    padding:15px;
 }
 
 .stats-grid{
@@ -1220,16 +1208,12 @@ html,body{
     transition:.3s;
     z-index:99999;
 }
-
-.toast.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.toast.success{
-    background:#28a745;
-}
-
-.toast.error{
-    background:#dc3545;
+.toast{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#6C3EF4;
+    color:#fff;
+    padding:15px 20px;
+    border-radius:12px;
 }
