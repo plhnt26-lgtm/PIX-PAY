@@ -1241,15 +1241,15 @@ body{
     margin-bottom:15px;
 }
 
-.stats{
+.stats-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:10px;
 }
 
-.stats .card{
+.stats-grid .stat-card{
     margin:0;
-}
+                                }
 
 .bottom-nav{
     display:flex;
