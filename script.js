@@ -451,3 +451,41 @@ function adminLogin(){
     }
 
         }
+function autoProfit(){
+
+    let balance = Number(localStorage.getItem("balance")) || 0;
+
+    let investments = JSON.parse(localStorage.getItem("investments")) || [];
+
+    let now = Date.now();
+
+    investments.forEach(plan=>{
+
+        if(plan.finished) return;
+
+        while(now - plan.lastClaim >= 86400000 && plan.claimedDays < 20){
+
+            balance += plan.daily;
+
+            plan.claimedDays++;
+
+            plan.lastClaim += 86400000;
+
+            if(plan.claimedDays >= 20){
+
+                balance += plan.amount * 0.5;
+
+                plan.finished = true;
+
+            }
+
+        }
+
+    });
+
+    localStorage.setItem("balance", balance);
+    localStorage.setItem("investments", JSON.stringify(investments));
+
+    loadBalance();
+    loadStats();
+    }
