@@ -105,32 +105,41 @@ function loadBalance(){
 function submitDeposit(){
 
     let amount = Number(document.getElementById("amount").value);
-    let txid = document.getElementById("txid").value;
-    let receipt = document.getElementById("receipt").files.length;
     let network = document.getElementById("network").value;
+    let txHash = document.getElementById("txHash").value;
+    let image = document.getElementById("paymentImage").files[0];
 
-    if(amount <= 0 || txid=="" || receipt==0){
+    if(amount <= 0 || txHash == "" || !image){
         alert("Please fill all fields and upload screenshot.");
         return;
     }
 
-    let history = JSON.parse(localStorage.getItem("history")) || [];
+    const reader = new FileReader();
 
-    history.push({
-        type:"Deposit",
-        network:network.toUpperCase(),
-        amount:amount,
-        status:"Pending",
-        date:new Date().toLocaleString()
-    });
+    reader.onload = function(){
 
-    localStorage.setItem("history", JSON.stringify(history));
+        let history = JSON.parse(localStorage.getItem("history")) || [];
 
-    loadBalance();
-    loadStats();
+        history.push({
+            type: "Deposit",
+            network: network.toUpperCase(),
+            amount: amount,
+            txHash: txHash,
+            image: reader.result,
+            status: "Pending",
+            date: new Date().toLocaleString()
+        });
 
-    alert("Deposit request submitted! Waiting for Admin approval.");
+        localStorage.setItem("history", JSON.stringify(history));
 
+        loadHistory();
+        loadStats();
+        loadBalance();
+
+        alert("Deposit request submitted! Waiting for Admin approval.");
+    };
+
+    reader.readAsDataURL(image);
 }
 
 // ==========================
@@ -413,7 +422,12 @@ function loadAdminHistory(){
             ${item.network ? `<p><strong>Network:</strong> ${item.network}</p>` : ""}
 
             <p><strong>Amount:</strong> $${item.amount}</p>
+            ${item.txHash ? `<p><strong>TX Hash:</strong><br>${item.txHash}</p>` : ""}
 
+${item.image ? `
+<p><strong>Payment Screenshot:</strong></p>
+<img src="${item.image}" style="width:220px;border-radius:10px;border:1px solid #ddd;">
+` : ""}
             <p><strong>Status:</strong> ${item.status || "Completed"}</p>
 
             <p><strong>Date:</strong> ${item.date}</p>
