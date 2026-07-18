@@ -347,7 +347,7 @@ window.onload = function(){
         loadAdminHistory();
     }
 
-}
+};
 function loadStats(){
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
@@ -470,63 +470,6 @@ function rejectRequest(index){
     loadAdminHistory();
 
 }
-function adminLogin(){
-
-    let email = document.getElementById("adminUser").value.trim();
-    let pass = document.getElementById("adminPass").value.trim();
-
-    if(email === "admin@gmail.com" && pass === "123456"){
-
-        localStorage.setItem("adminLogin","true");
-
-        window.location.href = "admin.html";
-
-    }else{
-
-        alert("Wrong Email or Password");
-
-    }
-
-        }
-function autoProfit(){
-
-    let balance = Number(localStorage.getItem("balance")) || 0;
-
-    let investments = JSON.parse(localStorage.getItem("investments")) || [];
-
-    let now = Date.now();
-
-    investments.forEach(plan=>{
-
-        if(plan.finished) return;
-
-        while(now - plan.lastClaim >= 86400000 && plan.claimedDays < 20){
-
-            balance += plan.daily;
-
-            plan.claimedDays++;
-
-            plan.lastClaim += 86400000;
-
-            if(plan.claimedDays >= 20){
-
-                balance += plan.amount * 0.5;
-
-                plan.finished = true;
-
-            }
-
-        }
-
-    });
-
-    localStorage.setItem("balance", balance);
-    localStorage.setItem("investments", JSON.stringify(investments));
-
-    loadBalance();
-    loadStats();
-    }
-
 
 // ==========================
 // AUTO PROFIT + COUNTDOWN
