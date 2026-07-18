@@ -326,6 +326,8 @@ window.onload = function(){
     loadBalance();
     loadStats();
 
+    updateCountdown();
+
     if(document.getElementById("network")){
         changeWallet();
     }
