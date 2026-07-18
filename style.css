@@ -91,7 +91,7 @@ nav a:hover{
    Card
 ========================== */
 
-.card{
+.stat.card{
 background:#fff;
 border-radius:18px;
 padding:18px;
