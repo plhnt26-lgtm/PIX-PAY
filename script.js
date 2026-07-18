@@ -293,9 +293,10 @@ function copyAddress(){
 // ==========================
 // Auto Load
 // ==========================
-window.onload=function(){
+window.onload = function(){
 
     loadBalance();
+    loadStats();
 
     if(document.getElementById("network")){
         changeWallet();
@@ -303,6 +304,10 @@ window.onload=function(){
 
     if(document.getElementById("historyList")){
         loadHistory();
+    }
+
+    if(document.getElementById("adminHistory")){
+        loadAdminHistory();
     }
 
 };
@@ -390,30 +395,30 @@ function loadAdminHistory(){
 // ==========================
 // Admin Approve / Reject
 // ==========================
-
 function approveRequest(index){
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
-    if(history[index].type === "Deposit" && history[index].status === "Pending"){
+    let balance = Number(localStorage.getItem("balance")) || 0;
 
-        let balance = Number(localStorage.getItem("balance")) || 0;
-
+    if(history[index].type==="Deposit" && history[index].status==="Pending"){
         balance += Number(history[index].amount);
-
-        localStorage.setItem("balance", balance);
-
     }
 
-    history[index].status = "Completed";
+    if(history[index].type==="Withdraw" && history[index].status==="Pending"){
+        balance -= Number(history[index].amount);
+    }
+
+    localStorage.setItem("balance", balance);
+
+    history[index].status="Completed";
 
     localStorage.setItem("history", JSON.stringify(history));
 
-    alert("Request Approved!");
+    alert("Approved!");
 
     loadAdminHistory();
-
-                             }
+}
 
 function rejectRequest(index){
 
