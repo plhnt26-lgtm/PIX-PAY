@@ -143,18 +143,17 @@ nav a:hover{
 ========================== */
 
 .card{
-    background:#fff;
-    border-radius:20px;
-    padding:25px;
-    margin-bottom:25px;
-    box-shadow:0 10px 25px rgba(108,62,244,.12);
-    border:1px solid rgba(55,183,255,.15);
-    transition:.3s;
+.card{
+background:#fff;
+border-radius:18px;
+padding:18px;
+margin-top:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(108,62,244,.18);
+transform:translateY(-4px);
 }
 
 .card h2,
