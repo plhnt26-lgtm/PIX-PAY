@@ -1290,3 +1290,45 @@ header nav a:hover{
     color:#37B7FF;
     font-size:28px;
 }
+/* Mobile Responsive */
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    overflow-x:hidden;
+}
+
+.main-content{
+    width:100%;
+    max-width:420px;
+    margin:auto;
+    padding:15px;
+}
+
+.card{
+    width:100%;
+    margin-bottom:15px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.stats .card{
+    margin:0;
+}
+
+.bottom-nav{
+    display:flex;
+    justify-content:space-around;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
