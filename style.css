@@ -1188,8 +1188,11 @@ header nav a:hover{
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin:25px 0;
+    gap:10px;
+}
+
+.stat-card{
+    min-width:0;
 }
 
 .stat-card{
