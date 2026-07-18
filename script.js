@@ -333,7 +333,7 @@ window.onload = function(){
     autoProfit();
 
     loadBalance();
-
+ 
     loadStats();
 
     updateCountdown();
@@ -356,7 +356,9 @@ window.onload = function(){
     if(document.getElementById("adminHistory")){
         loadAdminHistory();
     }
-
+    if(document.getElementById("notificationBox")){
+    loadNotification();
+    }
 };
 function loadStats(){
 
