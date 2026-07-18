@@ -591,3 +591,13 @@ function updateCountdown(){
     });
 
             }
+function loadNotification(){
+
+    let msg = localStorage.getItem("notification");
+
+    if(msg){
+        document.getElementById("notificationBox").style.display = "block";
+        document.getElementById("notificationText").innerHTML = msg;
+    }
+
+}
