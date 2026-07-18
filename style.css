@@ -205,3 +205,82 @@ button:hover{
         font-size:28px;
     }
         }
+/* ==========================
+   BODY & MAIN CONTENT
+========================== */
+
+body{
+    background:#F5F7FF;
+}
+
+.main-content{
+    width:95%;
+    max-width:1200px;
+    margin:20px auto 90px;
+}
+
+
+/* ==========================
+   BANNER CARD
+========================== */
+
+.banner-card{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    border-radius:25px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(108,62,244,.20);
+}
+
+.banner-card h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.banner-card p{
+    font-size:17px;
+}
+
+
+/* ==========================
+   BALANCE CARD
+========================== */
+
+.balance-card{
+    background:linear-gradient(135deg,#6C3EF4,#9C5BFF);
+    color:#fff;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    margin-bottom:20px;
+    box-shadow:0 12px 25px rgba(108,62,244,.25);
+}
+
+.balance-card h2,
+.balance-card p,
+.balance-card h1{
+    color:#fff;
+}
+
+.balance-card h1{
+    font-size:48px;
+    margin-top:10px;
+}
+
+
+/* ==========================
+   QUICK ACTIONS
+========================== */
+
+.quick-actions{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:25px 0;
+}
+
+.action-card{
+    background:#fff;
+    border-radius:20px;
+   
