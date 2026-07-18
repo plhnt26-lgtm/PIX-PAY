@@ -370,3 +370,54 @@ body{
     }
 
 }
+/* ==========================
+   EXTRA
+========================== */
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.header-top h1{
+    margin:0;
+}
+
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #fff;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+}
+
+.plan-info{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:18px 0;
+}
+
+.info-box{
+    background:#F5F7FF;
+    border-radius:12px;
+    padding:12px;
+}
+
+.info-box small{
+    display:block;
+    color:#777;
+    margin-bottom:5px;
+}
+
+.info-box h3{
+    margin:0;
+    color:#6C3EF4;
+}
