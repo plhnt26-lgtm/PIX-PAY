@@ -348,8 +348,9 @@ window.onload = function(){
         changeWallet();
     }
 
-    if(document.getElementById("historyList")){
-        loadHistory();
+    if(document.getElementById("adminHistory")){
+    loadAdminHistory();
+    loadAdminStats();
     }
 
     if(document.getElementById("adminHistory")){
@@ -603,3 +604,40 @@ function loadNotification(){
     }
 
 }
+function loadAdminStats(){
+
+    let history = JSON.parse(localStorage.getItem("history")) || [];
+
+    let deposit = 0;
+    let withdraw = 0;
+    let pending = 0;
+
+    history.forEach(function(item){
+
+        if(item.type==="Deposit"){
+            deposit += Number(item.amount);
+        }
+
+        if(item.type==="Withdraw"){
+            withdraw += Number(item.amount);
+        }
+
+        if(item.status==="Pending"){
+            pending++;
+        }
+
+    });
+
+    if(document.getElementById("adminDeposit")){
+        document.getElementById("adminDeposit").innerHTML="$"+deposit.toFixed(2);
+    }
+
+    if(document.getElementById("adminWithdraw")){
+        document.getElementById("adminWithdraw").innerHTML="$"+withdraw.toFixed(2);
+    }
+
+    if(document.getElementById("adminPending")){
+        document.getElementById("adminPending").innerHTML=pending;
+    }
+
+       }
