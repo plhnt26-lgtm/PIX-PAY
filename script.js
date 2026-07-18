@@ -320,13 +320,21 @@ function copyAddress(){
 // Auto Load
 // ==========================
 window.onload = function(){
+window.onload=function(){
 
     autoProfit();
 
     loadBalance();
+
     loadStats();
 
     updateCountdown();
+
+    // Countdown រៀងរាល់ 1 វិនាទី
+    setInterval(updateCountdown,1000);
+
+    // ពិនិត្យប្រាក់រៀងរាល់ 1 នាទី
+    setInterval(autoProfit,60000);
 
     if(document.getElementById("network")){
         changeWallet();
@@ -340,7 +348,7 @@ window.onload = function(){
         loadAdminHistory();
     }
 
-};
+}
 function loadStats(){
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
@@ -557,3 +565,92 @@ function updateCountdown(){
 }
 
 setInterval(updateCountdown,1000);
+// ==========================
+// AUTO PROFIT + COUNTDOWN
+// ==========================
+
+function autoProfit(){
+
+    let balance = Number(localStorage.getItem("balance")) || 0;
+
+    let investments = JSON.parse(localStorage.getItem("investments")) || [];
+
+    let now = Date.now();
+
+    investments.forEach(plan=>{
+
+        if(plan.finished) return;
+
+        while(now - plan.lastClaim >= 86400000 && plan.claimedDays < plan.days){
+
+            // Daily Profit
+            balance += Number(plan.daily);
+
+            plan.claimedDays++;
+
+            plan.lastClaim += 86400000;
+
+            // Finish Plan
+            if(plan.claimedDays >= plan.days){
+
+                // Return 50% Principal
+                balance += plan.amount * 0.5;
+
+                plan.finished = true;
+
+            }
+
+        }
+
+    });
+
+    localStorage.setItem("balance",balance);
+    localStorage.setItem("investments",JSON.stringify(investments));
+
+    loadBalance();
+    loadStats();
+
+}
+
+// ==========================
+// COUNTDOWN
+// ==========================
+
+function updateCountdown(){
+
+    let investments = JSON.parse(localStorage.getItem("investments")) || [];
+
+    investments.forEach(plan=>{
+
+        let el = document.getElementById("countdown"+plan.amount);
+
+        if(!el) return;
+
+        if(plan.finished){
+
+            el.innerHTML="Completed";
+
+            return;
+
+        }
+
+        let next = plan.lastClaim + 86400000;
+
+        let diff = next - Date.now();
+
+        if(diff < 0) diff = 0;
+
+        let h = Math.floor(diff/3600000);
+
+        let m = Math.floor((diff%3600000)/60000);
+
+        let s = Math.floor((diff%60000)/1000);
+
+        el.innerHTML =
+            String(h).padStart(2,"0")+":"+
+            String(m).padStart(2,"0")+":"+
+            String(s).padStart(2,"0");
+
+    });
+
+            }
