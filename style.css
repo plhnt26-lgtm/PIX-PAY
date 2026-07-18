@@ -1208,3 +1208,30 @@ html,body{
     transition:.3s;
     z-index:99999;
 }
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    header nav{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px;
+        margin-top:10px;
+    }
+
+    .plan-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-actions{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
