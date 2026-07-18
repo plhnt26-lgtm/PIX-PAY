@@ -601,8 +601,12 @@ function loadNotification(){
     let msg = localStorage.getItem("notification");
 
     if(msg){
+
         document.getElementById("notificationBox").style.display = "block";
         document.getElementById("notificationText").innerHTML = msg;
+
+        // លុប Notification បន្ទាប់ពីបង្ហាញ
+        localStorage.removeItem("notification");
     }
 
 }
