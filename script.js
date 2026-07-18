@@ -474,7 +474,8 @@ function approveRequest(index){
 }
 
 function rejectRequest(index){
-
+loadAdminHistory();
+loadAdminStats();
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history[index].status = "Rejected";
@@ -485,6 +486,7 @@ function rejectRequest(index){
     alert("Request Rejected!");
 
     loadAdminHistory();
+    loadAdminStats();
 
 }
 function adminLogin(){
