@@ -1387,3 +1387,38 @@ font-size:13px;
 .home-profit div:hover{
     transform:translateY(-5px);
 }
+.history-box{
+    margin-top:20px;
+}
+
+
+.history-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:15px;
+    border-radius:15px;
+    margin-top:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+
+.history-item p{
+    margin-top:5px;
+    color:#777;
+    font-size:13px;
+}
+
+
+.profit,
+.deposit{
+    color:#00b050;
+    font-weight:bold;
+}
+
+
+.withdraw{
+    color:#ff4757;
+    font-weight:bold;
+}
