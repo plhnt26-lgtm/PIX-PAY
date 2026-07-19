@@ -8,7 +8,7 @@ import {
   query,
   where
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
-alert("SCRIPT OK");
+
 // ==========================
 // PIX PAY - PART 
 // ==========================
@@ -39,43 +39,32 @@ async function register() {
     const fullname = document.getElementById("fullname").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-async function register() {
 
-    alert("REGISTER CLICKED");
-
-    const fullname = document.getElementById("fullname").value;
     if(fullname==="" || email==="" || password===""){
         alert("Please fill all fields.");
         return;
     }
-  const q = query(
-    collection(db, "users"),
-    where("email", "==", email)
-);
 
-const snapshot = await getDocs(q);
+    const q = query(
+        collection(db,"users"),
+        where("email","==",email)
+    );
 
+    const snapshot = await getDocs(q);
 
-
-} 
-alert("This email is already in use. Please login or use another email.");
-    try{
-
-        await addDoc(collection(db,"users"),{
-            fullname: fullname,
-            email: email,
-            password: password
-        });
-
-        alert("Registration Successful!");
-        window.location.href="login.html";
-
-    }catch(error){
-
-        alert(error.message);
-
+    if(!snapshot.empty){
+        alert("This email is already registered.");
+        return;
     }
 
+    await addDoc(collection(db,"users"),{
+        fullname: fullname,
+        email: email,
+        password: password
+    });
+
+    alert("Registration Successful!");
+    window.location.href="login.html";
 }
 
 // ==========================
