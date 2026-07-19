@@ -39,71 +39,79 @@
         
     </header>
 
-
 <div class="main-content">
 
-    <div id="notificationBox" class="notification-card" style="display:none;">
-        <h3>🔔 Notification</h3>
-        <p id="notificationText"></p>
-    </div>
-
-<div class="welcome-card">
-    <div class="welcome-left">
-        <span class="welcome-badge">🟢 Online</span>
-
+    <!-- Welcome -->
+    <div class="home-banner">
         <h2>Welcome Back 👋</h2>
-
         <p>PIX PAY Investment Platform</p>
     </div>
 
-    <div class="welcome-icon">
-        💎
+    <!-- Balance -->
+    <div class="home-balance">
+        <small>Total Balance</small>
+        <h1 id="balance">$1000.00</h1>
+
+        <div class="home-profit">
+            <div>
+                <span>Today's Profit</span>
+                <h3>$0.00</h3>
+            </div>
+
+            <div>
+                <span>Active Plans</span>
+                <h3 id="activePlan">0</h3>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="balance-card">
+    <!-- Quick Action -->
+    <div class="home-actions">
 
-    <div class="balance-top">
-        <span>Total Balance</span>
-        <span class="balance-status">🟢 Active</span>
-    </div>
-
-    <h1 id="balance">$1000.00</h1>
-
-    <div class="balance-buttons">
-        <a href="deposit.html" class="balance-btn deposit-btn">
-            💰 Deposit
+        <a href="deposit.html" class="home-action">
+            💰
+            <span>Deposit</span>
         </a>
 
-        <a href="withdraw.html" class="balance-btn withdraw-btn">
-            💸 Withdraw
+        <a href="withdraw.html" class="home-action">
+            💸
+            <span>Withdraw</span>
         </a>
+
+        <a href="history.html" class="home-action">
+            📜
+            <span>History</span>
+        </a>
+
+        <a href="profile.html" class="home-action">
+            👤
+            <span>Profile</span>
+        </a>
+
     </div>
 
-</div>
-    
+    <!-- Statistics -->
     <div class="stats-grid">
 
-    <div class="stat-card card">
-        <h3>Total Deposit</h3>
-        <h2 id="totalDeposit">$0.00</h2>
+        <div class="stat-card">
+            <h3>Deposit</h3>
+            <h2 id="totalDeposit">$0.00</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Withdraw</h3>
+            <h2 id="totalWithdraw">$0.00</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Investment</h3>
+            <h2 id="totalInvestment">$0.00</h2>
+        </div>
+
     </div>
 
-    <div class="stat-card card">
-        <h3>Total Withdraw</h3>
-        <h2 id="totalWithdraw">$0.00</h2>
-    </div>
-
-    <div class="stat-card card">
-        <h3>Total Investment</h3>
-        <h2 id="totalInvestment">$0.00</h2>
-    </div>
-
-    </div>
-
-
-
-    
+</div>
+   
     <div class="quick-actions">
 
     <a href="deposit.html" class="action-card">
