@@ -676,6 +676,17 @@ function toggleMenu(){
     document.getElementById("topMenu").classList.toggle("show");
 
 }
+function showPassword(){
+
+    let pass = document.getElementById("password");
+
+    if(pass.type === "password"){
+        pass.type = "text";
+    }else{
+        pass.type = "password";
+    }
+
+}
 window.register = register;
 window.login = login;
 window.logout = logout;
