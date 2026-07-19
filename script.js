@@ -31,7 +31,7 @@ if (localStorage.getItem("balance") == null) {
 // ==========================
 // Register
 // ==========================
-function register(){
+async function register() {
 
     const fullname = document.getElementById("fullname").value;
     const email = document.getElementById("email").value;
@@ -42,16 +42,23 @@ function register(){
         return;
     }
 
-    const user = {
-        fullname: fullname,
-        email: email,
-        password: password
-    };
+    try{
 
-    localStorage.setItem("user", JSON.stringify(user));
+        await addDoc(collection(db,"users"),{
+            fullname: fullname,
+            email: email,
+            password: password
+        });
 
-    alert("Registration Successful!");
-    window.location.href="login.html";
+        alert("Registration Successful!");
+        window.location.href="login.html";
+
+    }catch(error){
+
+        alert(error.message);
+
+    }
+
 }
 
 // ==========================
