@@ -147,35 +147,34 @@ function submitDeposit(){
 // ==========================
 function submitWithdraw(){
 
-    let amount = document.getElementById("amount").value;
+    let amount = Number(document.getElementById("amount").value);
+    let wallet = document.querySelector("input[type='text']").value;
 
-    if(amount == ""){
-        alert("Please enter amount");
+    if(amount <= 0 || wallet==""){
+        alert("Please fill all fields");
         return;
     }
 
-    let balance = localStorage.getItem("balance") || 1000;
+    let balance = Number(localStorage.getItem("balance")) || 0;
 
-    if(Number(amount) > Number(balance)){
+    if(amount > balance){
         alert("Insufficient Balance");
         return;
     }
-
-    balance = Number(balance) - Number(amount);
-
-    localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
         type:"Withdraw",
-        amount:"-$" + amount,
+        amount:amount,
+        wallet:wallet,
+        status:"Pending",
         date:new Date().toLocaleString()
     });
 
-    localStorage.setItem("history", JSON.stringify(history));
+    localStorage.setItem("history",JSON.stringify(history));
 
-    alert("Withdraw Submitted Successfully");
+    alert("Withdraw request submitted!");
 
     window.location.href="history.html";
 }
