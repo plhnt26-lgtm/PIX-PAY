@@ -238,25 +238,23 @@ body{
 .balance-card{
     background:linear-gradient(135deg,#6C3EF4,#9C5BFF);
     color:#fff;
-    border-radius:25px;
-    padding:20px;
+    border-radius:20px;
+    padding:18px;
     text-align:center;
-    margin-bottom:20px;
-    box-shadow:0 12px 25px rgba(108,62,244,.25);
+    margin-bottom:15px;
+    min-height:160px;
 }
 
 .balance-card h2{
     font-size:18px;
-    margin-bottom:6px;
 }
 
 .balance-card p{
-    font-size:15px;
-    margin:4px 0;
+    font-size:14px;
 }
 
 .balance-card h1{
-    font-size:40px;
+    font-size:32px;
     margin-top:5px;
 }
 
