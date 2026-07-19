@@ -1422,3 +1422,76 @@ font-size:13px;
     color:#ff4757;
     font-weight:bold;
 }
+/* ==========================
+   DEPOSIT / WITHDRAW / HISTORY
+========================== */
+
+.form-card{
+    max-width:600px;
+    margin:25px auto;
+    padding:25px;
+    border-radius:25px;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.page-title{
+    text-align:center;
+    color:#6C3EF4;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.form-label{
+    font-weight:600;
+    color:#555;
+    display:block;
+    margin-bottom:8px;
+}
+
+.primary-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+}
+
+
+/* History */
+
+.history-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#F7F8FF;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:12px;
+}
+
+.history-item p{
+    margin:5px 0;
+    color:#777;
+}
+
+.profit{
+    color:#00b050;
+}
+
+.deposit{
+    color:#1877f2;
+}
+
+.withdraw{
+    color:#ff4757;
+}
