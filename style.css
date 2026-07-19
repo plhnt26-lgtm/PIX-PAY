@@ -1848,3 +1848,45 @@ body{
 .dashboard-menu a:hover{
     transform:translateY(-5px);
 }
+/* FIX HOME MENU SIZE + COLOR */
+
+.bottom-nav,
+.home-actions,
+.dashboard-menu{
+    background:transparent;
+}
+
+.home-action,
+.dashboard-menu a,
+.bottom-nav a{
+    background:#6C3EF4 !important;
+    color:#fff !important;
+    width:100%;
+    min-height:70px;
+    border-radius:18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+    font-weight:700;
+}
+
+.home-action span,
+.bottom-nav span{
+    color:#fff !important;
+    font-size:13px;
+}
+
+.home-actions,
+.dashboard-menu{
+    gap:12px;
+}
+
+@media(max-width:768px){
+
+.home-actions{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
