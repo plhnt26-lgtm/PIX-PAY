@@ -1045,3 +1045,108 @@ font-size:13px;
 .balance-btn:hover{
     transform:translateY(-3px);
 }
+/* ==========================
+   HOME NEW UI
+========================== */
+
+.home-banner{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:#fff;
+    border-radius:22px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 12px 30px rgba(108,62,244,.25);
+}
+
+.home-banner h2{
+    font-size:26px;
+    margin-bottom:6px;
+}
+
+.home-banner p{
+    opacity:.9;
+}
+
+.home-balance{
+    background:#fff;
+    border-radius:22px;
+    padding:25px;
+    text-align:center;
+    margin-bottom:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.home-balance small{
+    color:#888;
+    font-size:15px;
+}
+
+.home-balance h1{
+    font-size:42px;
+    color:#6C3EF4;
+    margin:12px 0;
+}
+
+.home-profit{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.home-profit div{
+    background:#f5f7ff;
+    border-radius:16px;
+    padding:15px;
+}
+
+.home-profit span{
+    font-size:13px;
+    color:#666;
+}
+
+.home-profit h3{
+    margin-top:6px;
+    color:#37B7FF;
+}
+
+.home-actions{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin:20px 0;
+}
+
+.home-action{
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+    text-decoration:none;
+    color:#6C3EF4;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.home-action:hover{
+    transform:translateY(-4px);
+}
+
+.home-action span{
+    display:block;
+    margin-top:8px;
+    font-weight:600;
+    font-size:13px;
+}
+
+@media(max-width:768px){
+
+    .home-actions{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .home-balance h1{
+        font-size:34px;
+    }
+
+}
