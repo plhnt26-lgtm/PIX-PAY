@@ -352,10 +352,6 @@ window.onload = function(){
     loadAdminHistory();
     loadAdminStats();
     }
-
-    if(document.getElementById("adminHistory")){
-        loadAdminHistory();
-    }
     if(document.getElementById("notificationBox")){
     loadNotification();
     }
