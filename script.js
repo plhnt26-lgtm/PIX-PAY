@@ -39,7 +39,11 @@ async function register() {
     const fullname = document.getElementById("fullname").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+async function register() {
 
+    alert("REGISTER CLICKED");
+
+    const fullname = document.getElementById("fullname").value;
     if(fullname==="" || email==="" || password===""){
         alert("Please fill all fields.");
         return;
