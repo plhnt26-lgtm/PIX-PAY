@@ -413,6 +413,8 @@ function loadAdminHistory(){
 
     history.forEach(function(item,index){
 
+if(item.status !== "Pending") return;
+
         html += `
         <div class="card" style="margin-bottom:15px;">
             <h3>${item.type}</h3>
@@ -420,6 +422,7 @@ function loadAdminHistory(){
             ${item.network ? `<p><strong>Network:</strong> ${item.network}</p>` : ""}
 
             <p><strong>Amount:</strong> $${item.amount}</p>
+            ${item.wallet ? `<p><strong>Wallet:</strong> ${item.wallet}</p>` : ""}
             ${item.txHash ? `<p><strong>TX Hash:</strong><br>${item.txHash}</p>` : ""}
 
 ${item.image ? `
@@ -455,7 +458,7 @@ function approveRequest(index){
     }
 
     if(history[index].type==="Withdraw" && history[index].status==="Pending"){
-        balance -= Number(history[index].amount);
+    balance -= Number(history[index].amount);
     }
 
     localStorage.setItem("balance", balance);
