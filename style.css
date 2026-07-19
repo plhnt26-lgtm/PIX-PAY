@@ -742,3 +742,162 @@ box-shadow:
 0 0 10px #ff4757;
 
     }
+/* =================================
+   PIX PAY NEW DESIGN LAYER
+   NO CONFLICT VERSION
+================================= */
+
+
+/* Add this class to body */
+.pix-theme{
+    background:
+    linear-gradient(180deg,#f4f6ff,#ffffff);
+}
+
+
+/* NEW CARD STYLE */
+
+.pix-glass{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.pix-glass:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 20px 45px rgba(108,62,244,.18);
+
+}
+
+
+
+/* NEW GRADIENT EFFECT */
+
+.pix-gradient{
+
+background:
+linear-gradient(135deg,#6C3EF4,#37B7FF);
+
+color:white;
+
+}
+
+
+
+/* NEW BUTTON */
+
+.pix-button{
+
+border:none;
+
+padding:15px;
+
+width:100%;
+
+border-radius:20px;
+
+background:
+linear-gradient(135deg,#6C3EF4,#37B7FF);
+
+color:white;
+
+font-weight:700;
+
+font-size:17px;
+
+cursor:pointer;
+
+box-shadow:
+0 10px 25px rgba(108,62,244,.3);
+
+transition:.3s;
+
+}
+
+
+.pix-button:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+
+/* NEW ANIMATION */
+
+.pix-fade{
+
+animation:
+pixFade .6s ease;
+
+}
+
+
+@keyframes pixFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+
+
+/* NEW TITLE */
+
+.pix-title{
+
+font-size:26px;
+
+font-weight:700;
+
+color:#6C3EF4;
+
+}
+
+
+
+/* NEW BADGE */
+
+.pix-badge{
+
+display:inline-block;
+
+padding:6px 15px;
+
+border-radius:20px;
+
+background:#eef3ff;
+
+color:#6C3EF4;
+
+font-weight:600;
+
+font-size:13px;
+
+    }
