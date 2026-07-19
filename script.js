@@ -53,11 +53,8 @@ const snapshot = await getDocs(q);
 
 alert("Found: " + snapshot.size);
 
-if (!snapshot.empty) {
-    alert("STOP");
-    return;
-}
 } 
+alert("This email is already in use. Please login or use another email.");
     try{
 
         await addDoc(collection(db,"users"),{
