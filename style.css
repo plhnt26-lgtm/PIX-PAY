@@ -1608,3 +1608,44 @@ body{
         transform:scale(1);
     }
 }
+/* PIX PAY AUTH DESIGN */
+
+.login-box{
+    position:relative;
+    overflow:hidden;
+}
+
+.login-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:8px;
+    background:#6C3EF4;
+}
+
+.logo h1{
+    font-size:36px;
+    color:#6C3EF4;
+    font-weight:800;
+}
+
+.input-box{
+    border:1px solid #eee;
+    transition:0.3s;
+}
+
+.input-box:focus-within{
+    border-color:#6C3EF4;
+    box-shadow:0 0 8px rgba(108,62,244,0.3);
+}
+
+.login-box button{
+    background:linear-gradient(135deg,#6C3EF4,#9b51e0);
+    box-shadow:0 8px 15px rgba(108,62,244,0.3);
+}
+
+.login-box button:hover{
+    transform:translateY(-2px);
+}
