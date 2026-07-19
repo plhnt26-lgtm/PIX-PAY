@@ -164,12 +164,12 @@ function submitWithdraw(){
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
-        type:"Withdraw",
-        amount:amount,
-        wallet:wallet,
-        status:"Pending",
-        date:new Date().toLocaleString()
-    });
+    type:"Withdraw",
+    amount:amount,
+    wallet:wallet,
+    status:"Pending",
+    date:new Date().toLocaleString()
+});
 
     localStorage.setItem("history",JSON.stringify(history));
 
@@ -413,7 +413,7 @@ function loadAdminHistory(){
 
     history.forEach(function(item,index){
 
-if(item.status !== "Pending") return;
+
 
         html += `
         <div class="card" style="margin-bottom:15px;">
