@@ -1313,3 +1313,24 @@ font-size:13px;
     font-size:13px;
     font-weight:600;
 }
+.featured-plan{
+    animation: planFloat 4s ease-in-out infinite;
+}
+
+.featured-plan:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+@keyframes planFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+}
+
+.featured-plan .pix-button{
+    box-shadow:0 10px 25px rgba(108,62,244,.35);
+}
