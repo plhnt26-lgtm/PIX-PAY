@@ -273,22 +273,22 @@ body{
 .action-card{
     background:#fff;
     border-radius:15px;
-    padding:10px;
-    height:100px;
-    min-height:100px;
+    padding:8px;
+    height:75px;
+    min-height:75px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-decoration:none;
     color:#6C3EF4;
-    font-size:20px;
+    font-size:16px;
     box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .action-card span{
-    margin-top:4px;
-    font-size:14px;
+    margin-top:3px;
+    font-size:12px;
     font-weight:600;
 }
 /* ==========================
