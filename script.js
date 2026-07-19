@@ -645,3 +645,8 @@ function loadAdminStats(){
     }
 
        }
+function toggleMenu(){
+    document.getElementById("topMenu").classList.toggle("show");
+}function toggleMenu(){
+    document.getElementById("topMenu").classList.toggle("show");
+}
