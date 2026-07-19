@@ -1890,3 +1890,128 @@ body{
 }
 
 }
+/* =================================
+   PIX PAY MOBILE SIZE FIX
+   HOME + DEPOSIT + WITHDRAW + PROFIT
+================================= */
+
+
+/* HOME ACTION */
+
+.home-actions{
+    gap:12px !important;
+}
+
+.home-action{
+    height:85px !important;
+    padding:10px !important;
+    border-radius:18px !important;
+    font-size:26px !important;
+}
+
+.home-action span{
+    font-size:13px !important;
+    margin-top:5px !important;
+}
+
+
+/* HOME BANNER */
+
+.home-banner{
+    padding:18px !important;
+    border-radius:20px !important;
+}
+
+.home-banner h2{
+    font-size:22px !important;
+}
+
+.home-banner p{
+    font-size:14px !important;
+}
+
+
+/* BALANCE */
+
+.home-balance{
+    padding:18px !important;
+    border-radius:20px !important;
+}
+
+.home-balance h1{
+    font-size:34px !important;
+}
+
+
+/* DEPOSIT + WITHDRAW */
+
+.form-card{
+    width:92% !important;
+    max-width:500px !important;
+    margin:20px auto !important;
+    padding:20px !important;
+    border-radius:22px !important;
+}
+
+.page-title{
+    font-size:24px !important;
+}
+
+
+.form-card input,
+.form-card select{
+    height:50px !important;
+    padding:12px !important;
+    font-size:15px !important;
+    border-radius:14px !important;
+}
+
+.form-card button{
+    height:52px !important;
+    font-size:16px !important;
+    border-radius:15px !important;
+}
+
+
+/* PROFIT + HISTORY */
+
+.history-box{
+    width:92% !important;
+    max-width:600px !important;
+    margin:20px auto !important;
+}
+
+
+.history-item{
+    padding:14px !important;
+    border-radius:16px !important;
+    min-height:70px !important;
+}
+
+
+.profit,
+.deposit,
+.withdraw{
+    font-size:16px !important;
+    font-weight:700 !important;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.home-actions{
+    grid-template-columns:repeat(2,1fr) !important;
+}
+
+.home-action{
+    height:80px !important;
+}
+
+.form-card,
+.history-box{
+    width:94% !important;
+}
+
+}
