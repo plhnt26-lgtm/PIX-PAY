@@ -262,12 +262,6 @@ body{
    QUICK ACTIONS
 ========================== */
 
-.quick-actions{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin:30px 0;
-}
 
 .quick-actions{
     display:grid;
