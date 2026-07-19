@@ -239,13 +239,6 @@ body{
     font-size:16px;
     color:#fff;
 }
-.balance-card{
-    background:linear-gradient(135deg,#6C3EF4,#9C5BFF) !important;
-    color:#fff !important;
-    border-radius:25px;
-    padding:30px;
-    text-align:center;
-}
 
 /* ==========================
    BALANCE CARD
@@ -270,6 +263,13 @@ body{
     font-size:48px;
     margin-top:10px;
     font-weight:700;
+}
+.balance-card{
+    background:linear-gradient(135deg,#6C3EF4,#9C5BFF) !important;
+    color:#fff !important;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
 }
 
 /* ==========================
