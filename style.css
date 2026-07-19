@@ -1334,3 +1334,56 @@ font-size:13px;
 .featured-plan .pix-button{
     box-shadow:0 10px 25px rgba(108,62,244,.35);
 }
+/* ==========================
+   BALANCE ANIMATION
+========================== */
+
+.home-balance{
+    position:relative;
+    overflow:hidden;
+    animation:balanceShow .8s ease;
+}
+
+@keyframes balanceShow{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+.home-balance h1{
+    animation:numberGlow 3s infinite;
+}
+
+
+@keyframes numberGlow{
+
+    0%,100%{
+        text-shadow:0 0 0 transparent;
+    }
+
+    50%{
+        text-shadow:0 0 15px rgba(255,255,255,.8);
+    }
+
+}
+
+
+/* Profit Card */
+
+.home-profit div{
+    background:rgba(255,255,255,.15);
+    border-radius:15px;
+    padding:12px;
+    transition:.3s;
+}
+
+
+.home-profit div:hover{
+    transform:translateY(-5px);
+}
