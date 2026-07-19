@@ -665,3 +665,11 @@ function toggleMenu(){
     document.getElementById("topMenu").classList.toggle("show");
 
 }
+window.register = register;
+window.login = login;
+window.logout = logout;
+window.submitDeposit = submitDeposit;
+window.submitWithdraw = submitWithdraw;
+window.buyPlan = buyPlan;
+window.adminLogin = adminLogin;
+window.toggleMenu = toggleMenu;
