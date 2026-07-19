@@ -221,14 +221,6 @@ body{
 /* ==========================
    BANNER CARD
 ========================== */
-.banner-card{
-    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
-    color:#fff;
-    border-radius:25px;
-    padding:25px;
-    margin-bottom:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
 
 .banner-card h2{
     font-size:28px;
