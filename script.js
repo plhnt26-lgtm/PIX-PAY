@@ -51,7 +51,7 @@ async function register() {
 
 const snapshot = await getDocs(q);
 
-alert("Found: " + snapshot.size);
+
 
 } 
 alert("This email is already in use. Please login or use another email.");
