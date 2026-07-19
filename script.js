@@ -8,6 +8,7 @@ import {
   query,
   where
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+alert("SCRIPT LOADED");
 // ==========================
 // PIX PAY - PART 
 // ==========================
