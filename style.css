@@ -1495,3 +1495,80 @@ font-size:13px;
 .withdraw{
     color:#ff4757;
 }
+body{
+    background:linear-gradient(135deg,#6C3EF4,#8e2de2);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:90%;
+    max-width:380px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo h1{
+    color:#6C3EF4;
+}
+
+.logo p{
+    color:#777;
+}
+
+.login-box h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#f3f3f3;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.input-box input{
+    border:none;
+    outline:none;
+    background:none;
+    width:100%;
+    font-size:16px;
+}
+
+.login-box button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#6C3EF4;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    opacity:0.9;
+}
+
+.login-box p{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-box a{
+    color:#6C3EF4;
+    text-decoration:none;
+}
