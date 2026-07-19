@@ -243,33 +243,29 @@ body{
 /* ==========================
    BALANCE CARD
 ========================== */
-
 .balance-card{
-    background:#fff;
+    background:linear-gradient(135deg,#6C3EF4,#9C5BFF);
+    color:#fff;
     border-radius:25px;
-    padding:30px;
+    padding:20px;
     text-align:center;
     margin-bottom:20px;
     box-shadow:0 12px 25px rgba(108,62,244,.25);
 }
 
-.balance-card h2,
-.balance-card p,
-.balance-card h1{
-    color:#6C3EF4;
+.balance-card h2{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.balance-card p{
+    font-size:15px;
+    margin:4px 0;
 }
 
 .balance-card h1{
-    font-size:48px;
-    margin-top:10px;
-    font-weight:700;
-}
-.balance-card{
-    background:linear-gradient(135deg,#6C3EF4,#9C5BFF) !important;
-    color:#fff !important;
-    border-radius:25px;
-    padding:30px;
-    text-align:center;
+    font-size:40px;
+    margin-top:5px;
 }
 
 /* ==========================
