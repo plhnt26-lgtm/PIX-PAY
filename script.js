@@ -684,3 +684,4 @@ window.submitWithdraw = submitWithdraw;
 window.buyPlan = buyPlan;
 window.adminLogin = adminLogin;
 window.toggleMenu = toggleMenu;
+window.showPassword = showPassword;
