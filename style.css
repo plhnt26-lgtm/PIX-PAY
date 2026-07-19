@@ -917,21 +917,23 @@ font-size:13px;
     font-size:22px;
     cursor:pointer;
 }
-
 .top-menu{
     display:none;
     grid-template-columns:repeat(2,1fr);
     gap:12px;
     margin-top:20px;
+    width:100%;
 }
 
 .top-menu.show{
-    display:grid;
+    display:grid !important;
 }
 
 .top-menu a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-decoration:none;
-    text-align:center;
     padding:14px;
     border-radius:15px;
     background:rgba(255,255,255,.18);
