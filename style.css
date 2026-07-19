@@ -940,3 +940,57 @@ font-size:13px;
     color:#fff;
     font-weight:600;
 }
+/* ==========================
+   STEP 1 - WELCOME CARD
+========================== */
+
+.welcome-card{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    border-radius:24px;
+    padding:22px;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    box-shadow:0 15px 35px rgba(108,62,244,.25);
+}
+
+.welcome-left h2{
+    font-size:28px;
+    margin:10px 0 5px;
+}
+
+.welcome-left p{
+    opacity:.9;
+    font-size:15px;
+}
+
+.welcome-icon{
+    font-size:60px;
+}
+
+.welcome-badge{
+    display:inline-block;
+    background:rgba(255,255,255,.2);
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.welcome-card{
+    padding:18px;
+}
+
+.welcome-left h2{
+    font-size:22px;
+}
+
+.welcome-icon{
+    font-size:45px;
+}
+
+}
