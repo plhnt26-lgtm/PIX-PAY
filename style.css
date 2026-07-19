@@ -1150,3 +1150,18 @@ font-size:13px;
     }
 
 }
+.home-banner{
+    background:#6C3EF4 !important;
+    color:#fff !important;
+    padding:25px !important;
+    border-radius:20px !important;
+    margin-bottom:20px !important;
+}
+
+.home-banner h2{
+    color:#fff !important;
+}
+
+.home-banner p{
+    color:#fff !important;
+}
