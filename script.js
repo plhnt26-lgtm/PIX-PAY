@@ -54,8 +54,9 @@ const snapshot = await getDocs(q);
 alert("Found: " + snapshot.size);
 
 if (!snapshot.empty) {
-    alert("This email is already registered.");
+    alert("STOP");
     return;
+}
 } 
     try{
 
