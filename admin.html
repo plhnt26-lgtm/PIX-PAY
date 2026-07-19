@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="loadAdminHistory()">
+<body onload="loadAdminHistory();loadAdminStats();">
 <script>
 if(localStorage.getItem("adminLogin")!="true"){
     window.location.href="admin-login.html";
