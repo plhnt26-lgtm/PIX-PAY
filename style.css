@@ -901,3 +901,40 @@ font-weight:600;
 font-size:13px;
 
     }
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.menu-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,.2);
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.top-menu{
+    display:none;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.top-menu.show{
+    display:grid;
+}
+
+.top-menu a{
+    text-decoration:none;
+    text-align:center;
+    padding:14px;
+    border-radius:15px;
+    background:rgba(255,255,255,.18);
+    color:#fff;
+    font-weight:600;
+}
