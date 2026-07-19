@@ -1165,3 +1165,68 @@ font-size:13px;
 .home-banner p{
     color:#fff !important;
 }
+/* ===== Investment Plans New UI ===== */
+
+.section-title{
+    font-size:26px;
+    font-weight:700;
+    color:#6C3EF4;
+    margin:25px 0 15px;
+}
+
+.plan-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:18px;
+}
+
+.plan-card{
+    background:#fff;
+    border-radius:22px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.plan-card:hover{
+    transform:translateY(-6px);
+    border-color:#6C3EF4;
+}
+
+.plan-price{
+    font-size:34px;
+    font-weight:700;
+    color:#6C3EF4;
+}
+
+.plan-days{
+    background:#6C3EF4;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.info-box{
+    background:#F7F8FF;
+    border-radius:14px;
+    padding:12px;
+    margin-top:10px;
+}
+
+.info-box h3{
+    color:#37B7FF;
+}
+
+.pix-button{
+    margin-top:15px;
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    border:none;
+    border-radius:16px;
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    padding:14px;
+    width:100%;
+}
