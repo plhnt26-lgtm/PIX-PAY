@@ -44,7 +44,17 @@ async function register() {
         alert("Please fill all fields.");
         return;
     }
+  const q = query(
+    collection(db, "users"),
+    where("email", "==", email)
+);
 
+const snapshot = await getDocs(q);
+
+if (!snapshot.empty) {
+    alert("This email is already registered.");
+    return;
+}
     try{
 
         await addDoc(collection(db,"users"),{
