@@ -147,36 +147,37 @@ function submitDeposit(){
 // ==========================
 function submitWithdraw(){
 
-    let amount = Number(document.getElementById("amount").value);
+    let amount = document.getElementById("amount").value;
 
-    if(amount <= 0){
-        alert("Enter valid amount");
+    if(amount == ""){
+        alert("Please enter amount");
         return;
     }
 
-    let balance = Number(localStorage.getItem("balance"));
+    let balance = localStorage.getItem("balance") || 1000;
 
-    if(balance < amount){
-        alert("Not enough balance!");
+    if(Number(amount) > Number(balance)){
+        alert("Insufficient Balance");
         return;
     }
+
+    balance = Number(balance) - Number(amount);
+
+    localStorage.setItem("balance", balance);
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
     history.push({
-        type: "Withdraw",
-        amount: amount,
-        status: "Pending",
-        date: new Date().toLocaleString()
+        type:"Withdraw",
+        amount:"-$" + amount,
+        date:new Date().toLocaleString()
     });
 
     localStorage.setItem("history", JSON.stringify(history));
 
-    loadBalance();
-    loadStats();
+    alert("Withdraw Submitted Successfully");
 
-    alert("Withdraw submitted successfully!");
-
+    window.location.href="history.html";
 }
 // ==========================
 // Buy Investment Plan
