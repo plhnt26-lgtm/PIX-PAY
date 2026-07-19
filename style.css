@@ -1734,3 +1734,117 @@ body{
     color:#6a11cb;
     text-decoration:none;
 }
+/* ==========================
+   LOGIN REGISTER NEW DESIGN
+========================== */
+
+.login-box{
+    width:92%;
+    max-width:420px;
+    margin:60px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(108,62,244,.15);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo h1{
+    font-size:38px;
+    font-weight:800;
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.logo p{
+    color:#777;
+}
+
+.login-box h2{
+    text-align:center;
+    color:#6C3EF4;
+    margin-bottom:25px;
+}
+
+.input-box{
+    position:relative;
+    width:100%;
+    margin-bottom:15px;
+}
+
+.input-box input{
+    width:100%;
+    height:55px;
+    padding:0 50px 0 15px;
+    border-radius:15px;
+    border:2px solid #eee;
+    font-size:16px;
+}
+
+.input-box span{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:22px;
+}
+
+.login-box button{
+    height:55px;
+    margin-top:10px;
+}
+
+.login-box p{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-box a{
+    color:#6C3EF4;
+    font-weight:bold;
+}
+/* ==========================
+   DASHBOARD HOME
+========================== */
+
+.dashboard-card{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
+    color:white;
+    border-radius:25px;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+.dashboard-card h1{
+    font-size:40px;
+    margin-top:10px;
+}
+
+
+.dashboard-menu{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+
+.dashboard-menu a{
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    text-decoration:none;
+    color:#6C3EF4;
+    font-weight:bold;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+
+.dashboard-menu a:hover{
+    transform:translateY(-5px);
+}
