@@ -4,7 +4,9 @@ import {
   addDoc,
   getDocs,
   updateDoc,
-  doc
+  doc,
+  query,
+  where
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 // ==========================
 // PIX PAY - PART 
@@ -64,31 +66,28 @@ async function register() {
 // ==========================
 // Login
 // ==========================
-function login(){
+async function login(){
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const user = JSON.parse(localStorage.getItem("user"));
+    const q = query(
+        collection(db,"users"),
+        where("email","==",email),
+        where("password","==",password)
+    );
 
-    if(!user){
-        alert("No account found.");
+    const snapshot = await getDocs(q);
+
+    if(snapshot.empty){
+        alert("Invalid Email or Password");
         return;
     }
 
-    if(email===user.email && password===user.password){
-
-        localStorage.setItem("loggedIn","true");
-        window.location.href="dashboard.html";
-
-    }else{
-
-        alert("Invalid Email or Password");
-
-    }
+    localStorage.setItem("loggedIn","true");
+    window.location.href="dashboard.html";
 
 }
-
 // ==========================
 // Logout
 // ==========================
