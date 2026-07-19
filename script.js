@@ -148,8 +148,7 @@ function submitDeposit(){
 function submitWithdraw(){
 
     let amount = Number(document.getElementById("amount").value);
-    let wallet = document.querySelector("input[type='text']").value;
-
+    let wallet = document.getElementById("wallet").value;
     if(amount <= 0 || wallet==""){
         alert("Please fill all fields");
         return;
