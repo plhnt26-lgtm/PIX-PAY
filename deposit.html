@@ -37,12 +37,13 @@
 
 <div class="main-content">
 
-    <div class="card deposit-box">
+
+    <div class="form-card">
 
 
-<h2 class="deposit-title">Deposit</h2>
+<h2 class="page-title">💰 Deposit</h2>
 
-<label>Select Network</label>
+<label class="form-label">Select Network</label>
 
 <select id="network" onchange="changeWallet()">
     <option value="trx">USDT TRC20</option>
@@ -79,9 +80,11 @@ width="220">
 
 <input type="number" id="amount" placeholder="Enter Amount">
 
-<button onclick="submitDeposit()">Submit Deposit</button>
+<button class="primary-btn" onclick="submitDeposit()">
+    Submit Deposit
+</button>
 
-    </div>
+    
 
 </div>
 
