@@ -395,6 +395,8 @@ body{
 .card{
     background:#fff;
     border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .plan-info{
