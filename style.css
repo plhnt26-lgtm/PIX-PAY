@@ -222,26 +222,24 @@ body{
    BANNER CARD
 ========================== */
 
-.balance-card{
-    background:linear-gradient(135deg,#6C3EF4,#9C5BFF);
+.banner-card{
+    background:linear-gradient(135deg,#6C3EF4,#37B7FF);
     color:#fff;
     border-radius:25px;
-    padding:35px 25px;
-    text-align:center;
-    margin-bottom:25px;
-    box-shadow:0 15px 35px rgba(108,62,244,.25);
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .banner-card h2{
-    font-size:32px;
-    margin-bottom:10px;
+    font-size:28px;
+    margin-bottom:8px;
 }
 
 .banner-card p{
-    font-size:17px;
+    font-size:16px;
+    color:#fff;
 }
-
-
 /* ==========================
    BALANCE CARD
 ========================== */
@@ -422,45 +420,3 @@ body{
     margin:0;
     color:#6C3EF4;
 }
-.header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:20px;
-}
-
-.header-top h1{
-    margin:0;
-}
-
-.avatar{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    border:3px solid #fff;
-    object-fit:cover;
-}
-
-.card{
-    background:#fff;
-    border-radius:20px;
-}
-
-.plan-info{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin:20px 0;
-}
-
-.info-box{
-    background:#F8F9FF;
-    border-radius:15px;
-    padding:12px;
-}
-
-.info-box small{
-    color:#888;
-    display:block;
-    margin-bottom:5px;
-    }
