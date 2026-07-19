@@ -221,7 +221,6 @@ body{
 /* ==========================
    BANNER CARD
 ========================== */
-
 .banner-card{
     background:linear-gradient(135deg,#6C3EF4,#37B7FF);
     color:#fff;
@@ -247,26 +246,31 @@ body{
     padding:30px;
     text-align:center;
 }
+
 /* ==========================
    BALANCE CARD
 ========================== */
 
 .balance-card{
-    background: linear-gradient(135deg,#6C3EF4,#8A4DFF);
-    color:#fff;
+    background:#fff;
     border-radius:25px;
-    padding:35px;
+    padding:30px;
     text-align:center;
     margin-bottom:20px;
     box-shadow:0 12px 25px rgba(108,62,244,.25);
 }
 
-.balance-card h1,
 .balance-card h2,
-.balance-card p{
-    color:#fff;
+.balance-card p,
+.balance-card h1{
+    color:#6C3EF4;
 }
 
+.balance-card h1{
+    font-size:48px;
+    margin-top:10px;
+    font-weight:700;
+}
 
 /* ==========================
    QUICK ACTIONS
