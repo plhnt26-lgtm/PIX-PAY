@@ -1250,3 +1250,72 @@ a{
    
     -webkit-tap-highlight-color:transparent;
    }  
+/* Glass Card */
+.home-banner,
+.home-balance,
+.plan-card,
+.form-card,
+.deposit-box,
+.stat-card,
+.history-item{
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,.35);
+}
+
+/* Smooth Animation */
+*{
+    transition:.25s ease;
+}
+
+/* Better Hover */
+.plan-card:hover,
+.stat-card:hover,
+.home-action:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+/* Better Button */
+.pix-button,
+button{
+    background:linear-gradient(135deg,#6C3EF4,#4D8DFF);
+    border:none;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(108,62,244,.35);
+}
+
+.pix-button:hover,
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 45px rgba(108,62,244,.45);
+}
+
+/* Better Input */
+input,
+select,
+textarea{
+    background:#fafbff;
+}
+
+/* Card Radius */
+.plan-card,
+.home-balance,
+.home-banner,
+.form-card{
+    border-radius:28px;
+}
+
+/* Better Bottom Nav */
+.bottom-nav{
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    backdrop-filter:blur(25px);
+}
+
+/* Better Scroll */
+::-webkit-scrollbar{
+    width:6px;
+}
+::-webkit-scrollbar-thumb{
+    background:#6C3EF4;
+    border-radius:10px;
+   }
