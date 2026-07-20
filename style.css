@@ -1236,24 +1236,16 @@ textarea:focus{
 
 
 /* ===== REMOVE DUPLICATE CONFLICT ===== */
-
-
 img{
 
     max-width:100%;
 
 }
-
-
-
 button{
 
     font-family:'Poppins',sans-serif;
 
 }
-
-
-
 a{
    
     -webkit-tap-highlight-color:transparent;
