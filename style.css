@@ -1319,3 +1319,54 @@ textarea{
     background:#6C3EF4;
     border-radius:10px;
    }
+/* ==========================
+   ADMIN PANEL
+========================== */
+
+#adminHistory{
+    width:92%;
+    margin:20px auto;
+}
+
+.admin-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.admin-card h3{
+    color:#6C3EF4;
+    margin-bottom:10px;
+}
+
+.admin-card p{
+    margin:6px 0;
+}
+
+.admin-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.approve-btn{
+    flex:1;
+    background:#00b050;
+    color:#fff;
+}
+
+.reject-btn{
+    flex:1;
+    background:#ff3b30;
+    color:#fff;
+}
+
+.approve-btn:hover{
+    background:#009245;
+}
+
+.reject-btn:hover{
+    background:#e1261c;
+}
