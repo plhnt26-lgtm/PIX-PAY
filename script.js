@@ -179,15 +179,6 @@ window.login=login;
 window.logout=logout;
 window.showPassword=showPassword;
 window.toggleMenu=toggleMenu;
-import {
-collection,
-addDoc,
-getDocs,
-query,
-where,
-serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
-
 // ===============================
 // Deposit
 // ===============================
@@ -333,15 +324,6 @@ $${item.amount}
 window.submitDeposit=submitDeposit;
 window.submitWithdraw=submitWithdraw;
 window.loadHistory=loadHistory;
-import {
-doc,
-getDoc,
-updateDoc,
-addDoc,
-collection,
-serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
-
 // ===========================
 // Load Balance
 // ===========================
@@ -515,16 +497,6 @@ loadBalance();
 window.buyPlan=buyPlan;
 window.loadBalance=loadBalance;
 window.autoProfit=autoProfit;
-import {
-collection,
-getDocs,
-query,
-where,
-doc,
-updateDoc,
-getDoc
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
-
 // =========================
 // Logout
 // =========================
@@ -672,3 +644,50 @@ function loadNotification(){
 const box=document.getElementById("notificationBox");
 
 if(box){
+
+box.style.display="block";
+
+box.innerHTML="Welcome to PIX PAY";
+
+}
+
+}
+
+// =========================
+// Auto Load
+// =========================
+window.onload=()=>{
+
+auth.onAuthStateChanged(user=>{
+
+if(user){
+
+loadBalance();
+
+loadHistory();
+
+loadNotification();
+
+}
+
+});
+
+if(document.getElementById("adminHistory")){
+
+loadAdminHistory();
+
+loadAdminStats();
+
+}
+
+};
+
+// =========================
+// Export
+// =========================
+window.logout=logout;
+window.loadAdminHistory=loadAdminHistory;
+window.loadAdminStats=loadAdminStats;
+window.approveRequest=approveRequest;
+window.rejectRequest=rejectRequest;
+window.loadNotification=loadNotification;
