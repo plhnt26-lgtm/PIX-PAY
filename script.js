@@ -247,43 +247,74 @@ function buyPlan(price){
 // ==========================
 // History
 // ==========================
-function loadHistory(){
+function loadHistory() {
 
     let history = JSON.parse(localStorage.getItem("history")) || [];
-
     let historyList = document.getElementById("historyList");
 
-    if(!historyList) return;
+    if (!historyList) return;
 
-    if(history.length===0){
-        historyList.innerHTML="<p>No History Found.</p>";
+    historyList.innerHTML = "";
+
+    if (history.length === 0) {
+        historyList.innerHTML = `
+        <div class="history-item">
+            <div>
+                <b>No History</b>
+                <p>No transaction yet.</p>
+            </div>
+        </div>`;
         return;
     }
 
-    let html="";
+    history.slice().reverse().forEach(item => {
 
-    history.slice().reverse().forEach(function(item){
+        let color = "profit";
+        let sign = "+";
 
-        html += `
-        <div class="card" style="margin-top:15px;">
-            <h3>${item.type}</h3>
+        if (item.type === "Withdraw") {
+            color = "withdraw";
+            sign = "-";
+        }
 
-            ${item.network ? `<p><b>Network:</b> ${item.network}</p>` : ""}
+        if (item.type === "Deposit") {
+            color = "deposit";
+            sign = "+";
+        }
 
-            <p><b>Amount:</b> $${item.amount}</p>
+        if (item.type === "Investment") {
+            color = "profit";
+            sign = "-";
+        }
 
-            ${item.status ? `<p><b>Status:</b> ${item.status}</p>` : ""}
+        historyList.innerHTML += `
+        <div class="history-item">
 
-            <p><b>Date:</b> ${item.date}</p>
+            <div>
+
+                <b>${item.type}</b>
+
+                <p>${item.network || item.wallet || ""}</p>
+
+                <p>${item.date}</p>
+
+                <p>Status :
+                <strong>${item.status || "Completed"}</strong>
+                </p>
+
+            </div>
+
+            <strong class="${color}">
+                ${sign}$${Number(item.amount).toFixed(2)}
+            </strong>
 
         </div>
         `;
 
     });
 
-    historyList.innerHTML = html;
-
 }
+
 
 // ==========================
 // Wallet Address
