@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Panel - PIX PAY</title>
+
+<title>PIX PAY Admin</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body onload="loadAdminHistory();loadAdminStats();">
-<script>
-if(localStorage.getItem("adminLogin")!="true"){
-    window.location.href="admin-login.html";
-}
-</script>
+<body>
+
 <header>
-    <h1>PIX PAY ADMIN</h1>
+
+<div class="header-top">
+
+<h1>PIX PAY ADMIN</h1>
+
+<div class="header-right">
+
+<button class="menu-btn" onclick="logout()">
+Logout
+</button>
+
+</div>
+
+</div>
+
 </header>
 
 <div class="main-content">
 
+<h2 class="section-title">Dashboard</h2>
+
 <div class="stats-grid">
 
-    <div class="stat-card card">
-        <h3>Total Deposit</h3>
-        <h2 id="adminDeposit">$0.00</h2>
-    </div>
+<div class="stat-card">
 
-    <div class="stat-card card">
-        <h3>Total Withdraw</h3>
-        <h2 id="adminWithdraw">$0.00</h2>
-    </div>
+<h3>Total Deposit</h3>
 
-    <div class="stat-card card">
-        <h3>Pending</h3>
-        <h2 id="adminPending">0</h2>
-    </div>
+<h2 id="adminDeposit">$0.00</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Total Withdraw</h3>
+
+<h2 id="adminWithdraw">$0.00</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Pending</h3>
+
+<h2 id="adminPending">0</h2>
+
+</div>
+
+</div>
+
+<h2 class="section-title">Deposit & Withdraw Requests</h2>
+
 <div id="adminHistory"></div>
+
 </div>
 
 <script type="module" src="script.js"></script>
-<script>
-console.log(JSON.parse(localStorage.getItem("history")));
-loadAdminHistory();
-</script>
 
 </body>
 </html>
